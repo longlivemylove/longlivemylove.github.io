@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Centos7-网卡绑定 | LongLiveMyLove</title><meta name="description" content="Centos7-网卡绑定"><meta name="keywords" content="Centos,Liunx"><meta name="author" content="Kilig"><meta name="copyright" content="Kilig"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Centos7-网卡绑定"><meta name="twitter:description" content="Centos7-网卡绑定"><meta name="twitter:image" content="http://tva1.sinaimg.cn/large/007X8olVly1g8qru8oz9uj30ku0dwaak.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Centos7-网卡绑定"><meta property="og:url" content="https://longlivemylove.github.io/Centos7-网卡绑定"><meta property="og:site_name" content="LongLiveMyLove"><meta property="og:description" content="Centos7-网卡绑定"><meta property="og:image" content="http://tva1.sinaimg.cn/large/007X8olVly1g8qru8oz9uj30ku0dwaak.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://longlivemylove.github.io/Centos7-网卡绑定"><link rel="prev" title="Centos7默认启动顺序设置和删除内核" href="https://longlivemylove.github.io/Centos7默认启动顺序设置和删除内核.html"><link rel="next" title="Docker镜像保存和加载" href="https://longlivemylove.github.io/Docker镜像保存save和加载load.html"><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?370923bc438a46c33b8fd69483cd2c84";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="dns-prefetch" href="https://www.google-analytics.com"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-153143905-1', 'auto');
+ga('send', 'pageview');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight_copy: 'true',
+  highlight_lang: 'false',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: undefined,
+  copy_copyright_js: false,
+  ClickShowText: undefined,
+  medium_zoom: 'false',
+  Snackbar: undefined
+  
+}</script></head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">LongLiveMyLove</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-history"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-google-wallet"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/sitemap/"><i class="fa-fw fa fa-space-shuttle"></i><span> 导航</span></a></div></div></span><span class="pull_right" id="search_button"></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="http://tva1.sinaimg.cn/large/007X8olVly1g8u2bkqdzgj30u00u00v8.jpg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">18</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heartbeat"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-history"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-google-wallet"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/sitemap/"><i class="fa-fw fa fa-space-shuttle"></i><span> 导航</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#环境简述"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">环境简述</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#bond模式介绍"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">bond模式介绍</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#服务器配置bond"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">服务器配置bond</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#重启网卡并查看当前网络配置"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">重启网卡并查看当前网络配置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#查看bond0运行状态"><span class="toc_mobile_items-number">3.2.</span> <span class="toc_mobile_items-text">查看bond0运行状态</span></a></li></ol></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境简述"><span class="toc-number">1.</span> <span class="toc-text">环境简述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bond模式介绍"><span class="toc-number">2.</span> <span class="toc-text">bond模式介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器配置bond"><span class="toc-number">3.</span> <span class="toc-text">服务器配置bond</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#重启网卡并查看当前网络配置"><span class="toc-number">3.1.</span> <span class="toc-text">重启网卡并查看当前网络配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看bond0运行状态"><span class="toc-number">3.2.</span> <span class="toc-text">查看bond0运行状态</span></a></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(http://tva1.sinaimg.cn/large/007X8olVly1g8qrrgx6mwj31hc0u01ky.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">Centos7-网卡绑定</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-10-10<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-11-08</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Centos/">Centos</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon" aria-hidden="true"></i><span>字数总计: </span><span class="word-count">433</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon" aria-hidden="true"></i><span>阅读时长: 1 分钟</span><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h3 id="环境简述"><a href="#环境简述" class="headerlink" title="环境简述"></a>环境简述</h3><ol>
+<li>centos7操作系统，通过多张网卡绑定为一个逻辑网卡，实现本地网卡的冗余，带宽扩容和负载均衡</li>
+<li>物理网卡eth2、eth3和eh4 </li>
+<li>H3C s5130交换机</li>
+<li>bond方式</li>
+</ol>
+<h3 id="bond模式介绍"><a href="#bond模式介绍" class="headerlink" title="bond模式介绍"></a>bond模式介绍</h3><ul>
+<li>网卡绑定mode共有七种(0~6) bond0、bond1、bond2、bond3、bond4、bond5、bond6</li>
+<li>常用的有三种</li>
+</ul>
+<ul>
+<li>[0] <strong>mode=0：平衡负载模式，有自动备援，但需要”Switch”支援及设定</strong></li>
+<li>[1] mode=1：自动备援模式，其中一条线若断线，其他线路将会自动备援</li>
+<li>[6] mode=6：平衡负载模式，有自动备援，不必”Switch”支援及设定</li>
+</ul>
+<h3 id="服务器配置bond"><a href="#服务器配置bond" class="headerlink" title="服务器配置bond"></a>服务器配置bond</h3><p> eth2、eth3和eth4 编辑需要绑定的物理网卡，并且指定主从，网卡配置信息如下</p>
+<p><strong>以eth2举例说明</strong></p>
+<blockquote>
+<p>TYPE=Ethernet<br>BOOTPROTO=none<br>DEVICE=eth2<br>ONBOOT=yes<br>USERCTL=no<br>SLAVE=yes<br>MASTER=bond0<br>NM_CONTROLLED=no    [注]</p>
+</blockquote>
+<p>ETH3和ETH4 配置和ETH2类似，唯一修改的地方为DEVICE的名字</p>
+<p>[注]: NM_CONTROLLED=yes,说明 Network manger服务缺省情况下是启动的,NM_CONTROLLED是network manger的参数，它是实时生效的，修改后无需要重启网络服务（或网卡），如果NM_CONTROLLED=yes，当你修改ifcfg-ethx的文件内容时，如果内容不完全正确，有很大概率导致网络中断</p>
+<p><strong>bond0</strong><br>在/etc/sysconfig/network-scripts/目录下，创建ifcfg-bond0文件</p>
+<blockquote>
+<p>TYPE=Ethernet<br>BOOTPROTO=static<br>NAME=bond0<br>DEVICE=bond0<br>ONBOOT=yes<br>IPADDR=192.168.100.1<br>NETMASK=255.255.255.0<br>GATEWAY=192.168.100.254<br>USERCTL=no<br>BONDING_OPTS=”miimon=100 mode=0”<br>NM_CONTROLLED=no</p>
+</blockquote>
+<p><strong>修改modprobe相关设定文件</strong></p>
+<p> vi /etc/modprobe.d/bonding.conf</p>
+<blockquote>
+<p>lias bond0 binding<br>options bond0 miimon=100 mode=0</p>
+</blockquote>
+<p><strong>关闭NetworkManager服务</strong></p>
+<blockquote>
+<p>chkconfig NetworkManager off<br>service NetworkManager stop<br>systemctl disable NetworkManager</p>
+</blockquote>
+<h4 id="重启网卡并查看当前网络配置"><a href="#重启网卡并查看当前网络配置" class="headerlink" title="重启网卡并查看当前网络配置"></a>重启网卡并查看当前网络配置</h4><p>systemctl restart network<br>ip a </p>
+<h4 id="查看bond0运行状态"><a href="#查看bond0运行状态" class="headerlink" title="查看bond0运行状态"></a>查看bond0运行状态</h4><p>cat /proc/net/bonding/bond0</p>
+<hr>
+<p>服务器上配置结束，选择的是mode1需要交换机支持</p>
+</div></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Centos/">Centos    </a><a class="post-meta__tags" href="/tags/Liunx/">Liunx    </a></div><div class="post_share"><div class="social-share" data-image="http://tva1.sinaimg.cn/large/007X8olVly1g8qru8oz9uj30ku0dwaak.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg"><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/Centos7默认启动顺序设置和删除内核.html"><img class="prev_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qrt8vt0jj31900u0npf.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Centos7默认启动顺序设置和删除内核</span></div></a></div><div class="next-post pull_right"><a href="/Docker镜像保存save和加载load.html"><img class="next_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qruu78aaj309c07zt8q.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>Docker镜像保存和加载</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/Centos7-RPM包文件安装.html" title="Centos7-RPM包文件安装"><img class="relatedPosts_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qrppejsij30p10fj74q.jpg"><div class="relatedPosts_title">Centos7-RPM包文件安装</div></a></div><div class="relatedPosts_item"><a href="/Centos7默认启动顺序设置和删除内核.html" title="Centos7默认启动顺序设置和删除内核"><img class="relatedPosts_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qrt8vt0jj31900u0npf.jpg"><div class="relatedPosts_title">Centos7默认启动顺序设置和删除内核</div></a></div><div class="relatedPosts_item"><a href="/Centos7查看硬件信息.html" title="Centos7查看硬件信息"><img class="relatedPosts_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qrshqn0xj31900u01l1.jpg"><div class="relatedPosts_title">Centos7查看硬件信息</div></a></div><div class="relatedPosts_item"><a href="/Docker镜像保存save和加载load.html" title="Docker镜像保存和加载"><img class="relatedPosts_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qruu78aaj309c07zt8q.jpg"><div class="relatedPosts_title">Docker镜像保存和加载</div></a></div><div class="relatedPosts_item"><a href="/交换机链路聚合.html" title="交换机链路聚合"><img class="relatedPosts_cover lazyload" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g8qsdrq9h6j31hb0u04qp.jpg"><div class="relatedPosts_title">交换机链路聚合</div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'KDxFHRIOdCU6F8TtaaCfkJjq-gzGzoHsz',
+  appKey:'BICVNUTEbN1rzW6KycRyBlGQ',
+  placeholder:'ヾﾉ≧∀≦)o来啊，快活啊!',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  recordIP: true
+});</script></div></div></div><footer id="footer" style="background-image: url(http://tva1.sinaimg.cn/large/007X8olVly1g8qrrgx6mwj31hc0u01ky.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2019年10月01日 - 2020-5-14 By Kilig</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="ribbon_piao" mobile="false" src="/js/third-party/piao.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async></script><script src="/js/third-party/click_heart.js"></script></body></html>

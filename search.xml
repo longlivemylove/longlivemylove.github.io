@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>python学习</title>
+    <url>/python%E5%AD%A6%E4%B9%A0.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="LDLE输出程序员之歌"><a href="#LDLE输出程序员之歌" class="headerlink" title="LDLE输出程序员之歌"></a>LDLE输出程序员之歌</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">" "</span>*<span class="number">5</span>+<span class="string">" 程序员之歌"</span>)</span><br><span class="line">print(<span class="string">" "</span>*<span class="number">15</span>+<span class="string">" --《江城子》改编 \n"</span>)</span><br><span class="line">print(<span class="string">"十年生死两茫茫，写程序，到天亮。"</span>)</span><br><span class="line">print(<span class="string">"千行代码，bug何处藏。"</span>)</span><br><span class="line">print(<span class="string">"纵使上线又怎样,朝令该，夕断肠。"</span>)</span><br><span class="line">print(<span class="string">"领导每天新想法，天天改，日日忙。"</span>)</span><br><span class="line">print(<span class="string">"相顾无言，唯有泪千行。"</span>)</span><br><span class="line">print(<span class="string">"每晚灯火阑珊处，程序员，加班狂。"</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>把网站打包成桌面程序</title>
+    <url>/%E6%8A%8A%E7%BD%91%E7%AB%99%E6%89%93%E5%8C%85%E6%88%90%E6%A1%8C%E9%9D%A2%E7%A8%8B%E5%BA%8F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><p>1.Node.js &gt;=6（4.x可能有效，但不再经过测试，请升级）<br>2.macOS 10.9+ / Windows / Linux</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install nativefier -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>为<a href="https://longlivemylove.com/" target="_blank" rel="noopener">longlivemylove.com</a>创建本机桌面应用程序：</p>
+<blockquote>
+<p>nativefier “<a href="https://longlivemylove.com&quot;" target="_blank" rel="noopener">https://longlivemylove.com&quot;</a></p>
+</blockquote>
+<p>如果需要，可以通过 <code>--name &quot;Medium&quot;</code>在命令行选项中指定as 来覆盖应用名称或其他选项：</p>
+<blockquote>
+<p>nativefier –name “App” “”<a href="https://longlivemylove.com&quot;" target="_blank" rel="noopener">https://longlivemylove.com&quot;</a></p>
+</blockquote>
+<h3 id="详细用法"><a href="#详细用法" class="headerlink" title="详细用法"></a>详细用法</h3><p>阅读API文档（或nativefier –help）以获取可用于配置打包应用程序的其他命令行标志和选项。</p>
+<p><a href="https://github.com/jiahaog/nativefier/blob/master/docs/api.md" target="_blank" rel="noopener">https://github.com/jiahaog/nativefier/blob/master/docs/api.md</a></p>
+]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器固定网口顺序</title>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BA%E5%AE%9A%E7%BD%91%E5%8F%A3%E9%A1%BA%E5%BA%8F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>cp /usr/lib/udev/rules.d/60-net.rules  /etc/udev/rules.d/<br>60-net.rules<br>使用/lib/udev/rename_device这个程序，去查询/etc/sysconfig/network-scripts/下所有以ifcfg-开头的文件<br>如果在ifcfg-xx中匹配到HWADDR=xx:xx:xx:xx:xx:xx参数的网卡接口<br>则选取DEVICE=yyyy中设置的名字作为网卡名称</p>
+<p>内核文件设置恢复为默认。修改过的引导文件倒数第二行有一些指定参数示例。<br><img alt data-src="https://app.yinxiang.com/FileSharing.action?hash=1/2ba8a30a8fc6a18a4b801ab4809631e2-19385" class="lazyload"></p>
+<p>需要恢复为<br><img alt data-src="https://app.yinxiang.com/FileSharing.action?hash=1/5e0f80313ae4eea84a5ed0103930dfe3-17405" class="lazyload"></p>
+<p>重新生成参数<br>grub2-mkconfig -o /boot/grub2/grub.cfg<br><img alt data-src="https://app.yinxiang.com/FileSharing.action?hash=1/10cc0321a0177be5e0f4c34fa2f1a1eb-28262" class="lazyload"></p>
+<p> ethX来确认网口顺序</p>
+<p><strong>ip address show dev ethx | grep ether</strong></p>
+<p>并记录mac地址,然后将mac地址写入ifcfg-ethX文件内</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd /etc/sysconfig/network-scripts</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:d6:b4:a0&quot; &gt;&gt; ifcfg-eth0</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:d6:b4:a1&quot; &gt;&gt; ifcfg-eth1</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:d6:b4:a2&quot; &gt;&gt; ifcfg-eth2</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:d6:b4:a3&quot; &gt;&gt; ifcfg-eth3</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:a0:07&quot; &gt;&gt; ifcfg-eth4</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:a0:08&quot; &gt;&gt; ifcfg-eth5</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:a0:09&quot; &gt;&gt; ifcfg-eth6</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:a0:0a&quot; &gt;&gt; ifcfg-eth7</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:9d:bf&quot; &gt;&gt; ifcfg-eth8</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:9d:c0&quot; &gt;&gt; ifcfg-eth9</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:9d:c1&quot; &gt;&gt; ifcfg-eth10</span><br><span class="line">echo &quot;HWADDR=6c:92:bf:cd:9d:c2&quot; &gt;&gt; ifcfg-eth11</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>服务器</tag>
+        <tag>Anyuntec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SDN交换机配置信息</title>
+    <url>/SDN%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF.html</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="输入密码，查看文章。" data-whm="输入密码，查看文章。"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="输入密码，查看文章。" /><label>输入密码，查看文章。</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="381dafb4f9c244a6a5055cdc8b2c89b407e14cd8a5c6d43f9b29ead84e4a718a">7f04441adb8266a0f73744617ae0ab326d04f2b14397e967a7cf7be9606d5bc4e3518832aee930d79abc37ed20c12f33787d4750cb669553c4bbfbc79a090c2581c78c7bf6c710d8108a45ba517ba9d721cd270dc21b07e0b3ff6ab7eb2a206a3697abc2bc3d4bc137a69da1c1f8b66679ca4a09de98aff5bfb4c3f5c663c549c5a9aaa0cd57a74ea5be25096003d654f5c117a6864e20c67ac82e4ff7c73dbeda071605e5f7f4f56021d0c2d600d01ed28cde43ed55f62ddc6fa5efb630e2914ff811ce88bd63436f15fe313719b49f639e4450223387c36e21d1179fcd6e107ababbe0b41ca81ded6743dcbf785040850d783c848e1120b3e7dc9c8398e441ee5b878fd4505acb55b7ad661438ccd959bcd47894243ce845836687d380e30e14c1318cb2c1c8b8b4106aa00c872194503721c7a2d044ab57828a53b05fc5d12dfd051b39d77ef11d33b55a3740935fca0b9f719057d3d0bb1bd1d6c2952b22fe695ccd272f34b11164ae4daa1ce3fe48e0c62a7b214fc08566122ef3c7fb7b2f3247b6f70243752d3ced535634009554a279b2a27221b3e56bf1e6b4675f8da17118de4db5fc8a908322a116254405db9fe94f211edbd7bc13ba5871fd99908d4c29b30b61e9e7bdfea02d9c1fc1c27755decde330ba5d8e3ba3816f48f9f5a63c5cd7aa8c064625e6aefdc8debde44a07c95b8e7a4deeb2a57fd07929dbb277d7ad0448477012db8f44191610af03151401a4807c999a70847674b15a6383f06333afcdb6d956ffbff7b5c780699d9f23d126026ce322713f0f15f4ca6bff85d1211c63f6f5ce8f3a954b7c06dbb955031e3b67967e8d366f906d5dbc453a46ed3870b4817c0b96949ee9d236e766dca21cf0becc8848ff93e41130c897914f88de99fac2f41ff965bd637f1ddae33b03166537964541dcb7a95f6055dbae1070795ddabf1e62f91daa9329962374b2034f46c4ad47eeb65f468499eaca863dc114cc16e4aa1e23d04086f773ebfb45d3cf60e099fb49feabf1be61811fd6be34c346f0e9364a6394f03aa7f83ffdf4ecf480da04ae8275ab9c628242a3971b95a0ceaf04e93fc68301c53255f799f90e84b8bc4032e2679bc965081a26663f6a89e718fb7704a3387c594940df7c0195f20567aa70f0d05d4a1d4cd8956c2dc7d7136eb6ce0ba3075e05ffb38121c7e68352a2683c35af05f8df228073572f5fa1f53bbddd9c7ccd21a0ba1600bb1ede35e1c4905892d6840d98a9cee1c7bcc5d9fac23ea284149bc91b2d094c205db066226a178f7e29c5b6a0a922c6ad1254059b5be97520b98ce0d633be5ae3010f3b60e5eb8214e2ddb2aa00232e8a5ba5d5f36f14ed5968c2720deeaecd8e0a42d5a29cb332a56675f64104bf8d8939a793f31607a4ca2f0c1eae9796a7888cefa618baccfb4795aa8199c00376f224ce6940a010646718974fff0687166fb3772f5906213b4d416a0f0d9536e39f14d85a3cc958cba0fb1a1c1af5b4846814317b233bda671361a81ce5aa8df469e74bdc8e5a6672f0be9a7e78949f48bf76d12d47a5cfd76bc61a114e7f5c8f82612219ad582d6694cf17e4b10a19e4843e36551625355e6b613e174f22fd472c461c57b9f27eaf01aba99a16cb314b85c98f3e6c5577eff39ff7e59652c4ab8f2bf321e8e2f45f9389243a47258be081579e7a3cf5db4027217dc7f284e0f99b988d47b03a833f5d044f080925bbbf264a336870c08a46c5ac5b44ec240d2952fc380b5d0a31da0c09d64375f89da8b23c79c778cf6c8068a211b6f23bbcdcc41fbc46f5bb6002db55bbfdc2913b743fb4bbbd7f0dfef2f96982b3091e74975558cc61c017b0eab9e34790d73348429b80045b1e13c887ef64e3b4f44e5308e4aa6ad70890045fa44476332c7c17aae6223f563a686a49c7ffc90ed67602d110fb6a008d6384084c97adf9b5356fec4aa8103ce2e97a914726788dcbc00401e62076e01e27ba5942178b9a435ca9827b7f13bf169ed8e79107135ea78181dc067a1601bea22fd181279ebffcc96efac87a3402f86e8360441c55ffab00a436c9c1802b9acdb2dca48f78b0d66c4996078d904ae728a8733cf325a68dfea370fab1e02d7cfbbb1ad86cb99dfcebb6aa7c4a01a809efbb9566f06c7436c163d62466f197803690adc9305216a6256696c02dcf2769d8e5ee017a0635c2817ce8e8e702bc99ed1c7b5b907ad6e74df3108c109c623231d1d35fb334bd4895e8da5ed39714d05942ea77206c646dfb7f8d7769a4d44069b2dfc848750c63892e0ced2c299d49e94ac1ba9cb11ea4e1401bbb72dd1a60b63811152a9e15377e7dbd267fbe5f0e7a86f79dc29650ded0363e9ced74b630cb8f57c01786db1a7971f59ca131602580b1e056870468ceb2daad56d621c6dca9305afa49a3e91872cc6cd4964034b32c0db2fb1c8ef1c1b76f3ef7596156981199c8b80557a800db031787b9afa49c0346c5cf2b094c4b61233b0f877309912d36065141af4e28f938b97d372ff146dd123edec6155ac51b5c041521e3f6f80ae7e65a2810a0e20f6778a7a2beacd0850f018f264704f21a742a63b70ac7b0f5f0b81fa7eaa74224a6b38989ef9742f2720aadf8bcd6d28c05057450c78c3294e815a24a2ee12c0c1573bb7aa7a4d118f592dcdb6f4256f0e9215364e0ee80825200d3a72dc50270fbb84e52a48b180d54300703720cf84dd57fa0cba061ab90ac9dffe40104c2c76ab5ad2adbbd41aac28d207fe3b919cfec3e0d3d69dad7020f34190c4fb4bc050904d1b5c7e778fff2a89b20909d3e1e1cd20d501ab058a9e76b383111901f3ad576548cc1087d1dd7bc28267d17a4b8b49bb027b73fb3f4be5952a3f02ece3c1b0c842ddaaff4d471c3c5ba07e5f9c4cb3434c186bc5dd49be8b042eb8c762fb1e756b207f15f2dbaf3ae3b9928a3da3e0efc50aa2767ee4462ab023d53e579e47679a51e6b5c5b57c027254e37d1c68c576a8e296f5a793468e55c00982631880180e0365a26821a4e8589b8aa157fd5d2d23c86048758a32e546ff604fcfbb7e9bfc841c7f0308cbc9cfec55811ba0052dfcd14c94979ab18cd60dbdf17060d9d2d45e14b45d47c645dceec8c4be1376b8075f107fdbdced9c14d58a75591e9f949028581e06d144622aa28e416d0c073b4986f6676fbc0a89a0da5184eed6711f57a861f095c433443dbf762d060680101f6cd8aab59f6e1d91d7a30fc790772f1cb86d926b7e4a6df32fa02078ffe56423a71085b0552f6bd958432c836192061d71b608b7b5ef5898b8285f0138c7305cc6891dac89030287701fa6a330dcbeb6b4904af205d0616c5bb568f8b615159531d4d80163ef9beb19a60952799bc62180fa829260e448dc639507a8e140112ada1ac86c605fe420e20ee3ab169792d288df7a47c858d7808ede6e5249240f103bc9a6d8bfdbaf6ead8786b1fa900babdef1d1b782dd4afc00275488876b7b4670fd4fec4df0e63b0a2e932458f42ef256b11b0e94dbee56f0b1f3ee8fdda760654d1724441d7ee46873bde3be49c91c145fcf239bfc29659cbc8d9e3ff7a97a6e91c41b67e95fbaf734a91ac49d589bd06b676c792919a4f9e71565ecbd7fea70b434c31887b76ced7a9d8dfb6b39198e3ee0047489b1e78cd4300d402d862a360da8d3d10262becba3e3628c72a3179d7c5ed4a24f3efbbefba968e10b7f17ab0bb792221766fdb24fa35d252505d8a24f9741b91a07a3452360f08a9728921ae012a999a4ff8a6431e0c74bc6126de70da24c12a6c35726ed1c440b9b968925c560ce6e973538b74f981c7968996869a528a280aae96e0281e29fddd5c953fad9ec2a632e8711aa3a16f1c7624f394cdbd7b9820d8770b7705e60c6d8aca18c5cd5dfc96baac201bad03acd6b4478cd5d4cda46c50f853170a5b87433139e1684954a1a70e73e8dae1a668e1d1c9e0ceb19749a9e9355a2e6a0cb8316f3af210ec5761a51b4a47cca61b36509bc02d17e94b53d94e8c6c3aafa0998092cbcaaf05137217009795d8496c1047ba4e414089f28b2fb379c920c659b113da446002dcd268d82ce7c1652b3377c67e93f1fc44c004f3de879aba94d733d46802f5d394f966585e2ea77226404034b12e3dbe63a79fe4f93a825400ac36e1a6491c248031580ba31e939048904ecfb6b1020c8471fe8a85d7b52cf3fdf76269cc3335b211ff5ca61a8792794545d8f9823ced2ba84e72eb14c937401dad101b21b5a8af8ca4222b169334ae1b9333269ac60abcd4d43935ff825891d3b0709455e5461a6187b9e21d1bee82895d98ec123a660567950cc8515467d7d4cd2c7d7bec3ee8f3c0ad3c6b93a8fb75bc2fb6cebaa8ce476be2a1c0efb138fb1112efb220cb031dd0b67295fe441a3f3c5c266feb9c422e6656921105eea8ba76cdb982b62eea7334d542b97efefd1313cc245cf563acea692fa7007bddf534c584f7556512508edbc92ab5a3e3f5d13af9e72cf01a40a315734cd6b955bce00b857e459fc54ed611cbab70e60d2fdc305261fc27292bade22bf703fa0fc5cdc4d6780dafb9c51e0df5b364caac04f812e387a478455662ced3da2371eaa4575237248be0871ab20d4ea579d872d773fde13c1a60c85c1bab663bac18e680e4221847c8d9f8c9e055d4b08a6328d0290832d254cd5b45598cca74989a21a4f72e35ad19ab6553c84e4fc7bf3aedfbe7374b7d46a4be452b712779712fa5d8ce371f453368932120641651e3b20909041860d6658c5562c6556c8e80252090b0279dcbbf106e1d9a749fbe253486d7928e4a8abf7b8d8649e9f10fa4d80d843913e4d60cfe8f17a26fd760a8355d51850a2abe7041d4b4cb616be0174759471fed07ceeaa3a5063818534c04aba20a079fc2a422697378de2069d7abe9e67e9bc91efd0dc732ec92adf3121f5b3e8eee5d812ff73fc075577a6720d769052730c640d93c4dabb079a9fe9d8001ef68674dad651d7b16a708d626d6ea1073eeaaccb1dad56412913b806a29004a21de2c358230469d7a8472016e179db0d50ffe58c5cfade60450d0caa3d021a0e72db53feabdd39cebb0621c21d257abaec7fad4282ff028e4dfcc49c42bb780d31490874052042e7e4e2f8e915916e2a1bb5b9fbe5b7e07e493e9589c7f19e9744a663cecd9eb6e2a1921a7cebaceca49b2494dd9a06b380a1f99629dccaf374a137aae2eb4840f3e89f4f7e47920bade9f6c1ef876ca1f3f225e312463a91e11cff235592a1c624ea1dd7e0bad3ae450980cd82bfdc1dcdb29fdd3b940e6bed32be0a1afdd1c0f0059891701335f9379c25a60c8602248b56a6e3298ebccd6cf6e010768fd33b0fe08a165ef58e109c5e706b5638ac504348ff13fbb093d9037e8f9f60741d0fe82d011917246138c53f0c58ae2b9a8d779383d827bc28431eb957a657171fa9cd9131c111b52f8282d86528f35b1d9d30962e8a4e998083e5385791989e2dafad73cdabac5d0dcad990668c748d733d42bde09ceab0a2d1ade2a3d65118208449ce1884c510b1153da0669e18b683918e4fcc6e5015866430b5b743ff3b67acfd88d5777d36f631031a4baee8b57086b3de01e00717d61e6af2a1ee1a398147a4ee9e954c5748832948fdc47b0f7b4ae1b2dfc0efe366e544e34bb5fdaf58ef7871cd21236e14e8ee089e168719405aea377b8665c53c822a4675c6365301d7c625fe4c6a768bdb730bd92fc1f8cf0c54933f2f0764dec58794f3b1906088d7f2f88ba04ed353d9c8c9c8c6ed20b8680688bf883904fcdb69690030408b082675403b83a732e18c3295a92aecd076a5949f099a72b73997b4d35f5e8385bdb79bc3e1b824b1e1013e782e9741e32f9004130136cbbbf9e706dd7808dfb03b326aff24f986a4b152d6846a9e443e2843a4c6d73efb35a8f79e04d3fbbd7cc448e80e0b90e1dd31b4eb69fdc6c6720cf</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Anyuntec</category>
+      </categories>
+      <tags>
+        <tag>Anyuntec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SDN交换机和硬件设备连接关系</title>
+    <url>/SDN%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%92%8C%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E5%85%B3%E7%B3%BB.html</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="输入密码，查看文章。" data-whm="输入密码，查看文章。"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="输入密码，查看文章。" /><label>输入密码，查看文章。</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="fd3f99f9934a45ee041b67998123399e1d7ffaa438b353ca5876b69f15479600">7f04441adb8266a0f73744617ae0ab326d04f2b14397e967a7cf7be9606d5bc4e3518832aee930d79abc37ed20c12f33787d4750cb669553c4bbfbc79a090c2581c78c7bf6c710d8108a45ba517ba9d721cd270dc21b07e0b3ff6ab7eb2a206a3697abc2bc3d4bc137a69da1c1f8b66679ca4a09de98aff5bfb4c3f5c663c549c5a9aaa0cd57a74ea5be25096003d654f5c117a6864e20c67ac82e4ff7c73dbeda071605e5f7f4f56021d0c2d600d01ed28cde43ed55f62ddc6fa5efb630e2914ff811ce88bd63436f15fe313719b49f639e4450223387c36e21d1179fcd6e107ababbe0b41ca81ded6743dcbf785040850d783c848e1120b3e7dc9c8398e441ee5b878fd4505acb55b7ad661438ccd944219bf804c329bdf100b312fed7e432912b924a62e51d94644312614021126eb1b9b2bc45a492501c21d33b47dc87490e521b87891b48289f1fef204e79139f063ef85e1e53d863fe04a12418f961eab27fb2fdd5c85070cc9b185a1f98a7f4581b8d42e9f3c4f0fc75c364e2836777</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Anyuntec</category>
+      </categories>
+      <tags>
+        <tag>Anyuntec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常规网线和串口线线序</title>
+    <url>/%E4%B8%B2%E5%8F%A3%E7%BA%BF%E7%BA%BF%E5%BA%8F.html</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="输入密码，查看文章。" data-whm="输入密码，查看文章。"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="输入密码，查看文章。" /><label>输入密码，查看文章。</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="8e8c7e9543b327f49ab9a006023c3d5a25c8c15e65ee9e6b643b83372aeaa939">7f04441adb8266a0f73744617ae0ab326d04f2b14397e967a7cf7be9606d5bc4e3518832aee930d79abc37ed20c12f33787d4750cb669553c4bbfbc79a090c2581c78c7bf6c710d8108a45ba517ba9d721cd270dc21b07e0b3ff6ab7eb2a206a3697abc2bc3d4bc137a69da1c1f8b66679ca4a09de98aff5bfb4c3f5c663c549c5a9aaa0cd57a74ea5be25096003d654f5c117a6864e20c67ac82e4ff7c73dbeda071605e5f7f4f56021d0c2d600d01ed28cde43ed55f62ddc6fa5efb630e2914ff811ce88bd63436f15fe313719b49f639e4450223387c36e21d1179fcd6e107ababbe0b41ca81ded6743dcbf785040850d783c848e1120b3e7dc9c8398e441ee5b878fd4505acb55b7ad661438ccd9ea5a3533c8d547a27ac2328eca0ce928b4ad7915213e41853e0102a20a7809484941490951fe608e2e2c0817708e0fe4e0a9bccfdd88761be4166a90e9cf676237d85da068c736c21d2994cbbf5615de9f410cce2264bb82b23cf78c255434407a690363828e74a20e62e328d2b8075dbb70a573ad0e18eba6a21538eb5e494bd09fd2a2a54e080708f3206617b3fe99fecebeb2ccdaddcd11923de89dea3d2e8e8bdee7f6aee34432ac6eadf4fd69c78db25f8dc4a2745816008936096f68d32fc5738a9d95ff3f5a467fdd4fffbf901876154e1f0381b308de4c157dd04efc9196e93a2caf3232c341afdb333e17870ef25c8936e48eabf0b64aea696f5d96f1185c4be40d35d338316ffba62758c3080172882d281f80eb31624f5953e4dea124a5006b71eae15037fd55868f73b128a19560d3b963d92fc0c600869891071c76d025555853776c34df4cfa5873a1a5c3b4cd4f32f45772b15e5c2d7263ef6effe7d8e2e54659c898db8ef17be7ef278263586bc12d84efbf2bc54683ad9f276d6cff4cce200ecbab47717a15ba6f9553230dc8df9bfb75b36cc4dbc69e4bac5d91098bb259b9f87b4bdc3e84f04249d452c542e4cf4608386d3c79d62297d6e409d94e4470d9220fc44266b7080511ca2e93fd49574f2fdbc2e23ec9f6b154fb4f58b35879a789c10595356c552972399a0b6dad70c09d5acf3cca8cc410bff11cb075ed346f57f1c1115f44d0911ef807213dbbafe39474cf58b7a1ccb1391e2a53794d557a25d114506227898e18f414a1d246a0430ebaa5cad519dd6e012671c5ca283e4e14ffb94a5dfb0de2657deab09fff571971dc8cd6aef6685585a95a45041a3cb8739e30dd40c9a84073037978b129825c7fb89632c99ae0932d05ae6e43e0be2b2a3afb62dbd335cc7dbf623f7041e193fcdd529f8d61ca112dde954094614aa6ca00154c8d8742a6e11b0f6e1d4c140a6e942a1d053b98e2a7830e9fdbe919a2bc91ef1f56ebc3164141d29cfc6e65ac9acb560263ce2a71eadbc5b9f259b28ef6276a7815b36147586bf2fdad8af279464ecdc72ca62c77d68eba7cbb179f0d356dfe1cc5bc0db405ddd9162d2f114de1b3c64860984d9b2684d638b43554bc25f9a900bb72ce7a3ec32e83074347544bd7e4a960929d6951f08149a9f5cd33c1ea0cf4bfe15c49a60e3684ea37472720e703e12a2e8d895bbea0c0885e157b76e972baa2cf2dd9973900c241cdcbf4ef52afd5f791ef8b267d99f72b8d679bfcd825dcaa6d86f61a74415ea477b7327d43cf17234519215cb513e50a66136cdf7c528df1802ce76ae913de951ba3d85107423a8a6659a7a9f32f31a0f5bc029d2d034ea0c3d6bf7a411b615e2bb3cdc292b895ee6a7e3cd25fd84aedb889937dba1e763249d50486e13b029106450a010dc1beede89feb65cf0b29b7a9cf1c9f1d1b6749126a1a516e62e58f9df00a4c858fa10f5523e95b140e10f18600d3d024b07f35ef66377355664481bd1a83ad944b86fdeec2639d1665787976d8a046d90bc391912db95e8af221996aa9dcc3c833a0276f1cea202eb0a0d948621947e892f47a318366671505c65243221e255d9b101ece4034ccf2b6c9a7ddcf6d7bc5c38516eafb8902c8707a7ecfb2a829e95c1be99ece02b7e13e575e866ca43f6fe4fb61a95359a895f084f808e9224fa780eacd08b6288f22ff7c9116086308b9ff1f70b6327ebf1435dc14615e6b43be85197bf35b1b55a87d8445df855085efac00be59a4fd9e56a45a92e239bbd21f0e787a7d2f82ecbc265135aa8cae818196bb98efcfe7466720fcde08d901f40a09bd3befcb85b6cb7aae3efbaedbaf91e856be26d2f8f9d7e54c484c8e0d478f3d4e763244ae936006957a70800d0d8ab9308b7ac5c2a732ed3797556002083772ae4b7f52ecbae3eda9653b429263e95769d41b9b75f3cda60008b69c1b1db74e159abf467dbf5fb04e67fea6ef6c4a5522a31a823e13d3f31c5520f2ac5dc8dbce298e71f3edd1656e35904394028aa07f67f9d5816cfe72797269696a673a222bfe6b07cf</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Anyuntec</category>
+      </categories>
+      <tags>
+        <tag>Anyuntec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7查看硬件信息</title>
+    <url>/Centos7%E6%9F%A5%E7%9C%8B%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="查看服务器型号、序列号："><a href="#查看服务器型号、序列号：" class="headerlink" title="查看服务器型号、序列号："></a>查看服务器型号、序列号：</h3><blockquote>
+<p>dmidecode|grep “System Information” -A9|egrep  “Manufacturer|Product|Serial”</p>
+</blockquote>
+<h3 id="查看内存使用情况："><a href="#查看内存使用情况：" class="headerlink" title="查看内存使用情况："></a>查看内存使用情况：</h3><blockquote>
+<p>free -g</p>
+</blockquote>
+<h3 id="Linux-查看内存的插槽数-已经使用多少插槽-每条内存多大"><a href="#Linux-查看内存的插槽数-已经使用多少插槽-每条内存多大" class="headerlink" title="Linux 查看内存的插槽数,已经使用多少插槽.每条内存多大"></a>Linux 查看内存的插槽数,已经使用多少插槽.每条内存多大</h3><blockquote>
+<p>dmidecode|grep -A5 “Memory Device”|grep Size|grep -v Range</p>
+</blockquote>
+<h4 id="Linux-查看内存的频率"><a href="#Linux-查看内存的频率" class="headerlink" title="Linux 查看内存的频率"></a>Linux 查看内存的频率</h4><blockquote>
+<p>dmidecode|grep -A16 “Memory Device”|grep ‘Speed’</p>
+</blockquote>
+<h4 id="查看内存厂家："><a href="#查看内存厂家：" class="headerlink" title="查看内存厂家："></a>查看内存厂家：</h4><blockquote>
+<p>dmidecode -t memory | grep Manufacturer</p>
+</blockquote>
+<h4 id="CPU的统计信息"><a href="#CPU的统计信息" class="headerlink" title="CPU的统计信息"></a>CPU的统计信息</h4><blockquote>
+<p>Lscpu</p>
+</blockquote>
+<h4 id="查看CPU型号"><a href="#查看CPU型号" class="headerlink" title="查看CPU型号"></a>查看CPU型号</h4><blockquote>
+<p>cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c</p>
+</blockquote>
+<h4 id="查看物理CPU个数"><a href="#查看物理CPU个数" class="headerlink" title="查看物理CPU个数"></a>查看物理CPU个数</h4><blockquote>
+<p>cat /proc/cpuinfo| grep “physical id”| sort| uniq| wc -l</p>
+</blockquote>
+<h4 id="查看CPU核心数"><a href="#查看CPU核心数" class="headerlink" title="查看CPU核心数"></a>查看CPU核心数</h4><blockquote>
+<p>cat /proc/cpuinfo| grep “cpu cores”| uniq</p>
+</blockquote>
+<h4 id="查看逻辑CPU个数"><a href="#查看逻辑CPU个数" class="headerlink" title="查看逻辑CPU个数"></a>查看逻辑CPU个数</h4><blockquote>
+<p>cat /proc/cpuinfo| grep “processor”| wc -l</p>
+</blockquote>
+<h4 id="查看硬盘和分区分布"><a href="#查看硬盘和分区分布" class="headerlink" title="查看硬盘和分区分布"></a>查看硬盘和分区分布</h4><blockquote>
+<p>Lsblk</p>
+</blockquote>
+<h4 id="查看硬盘和分区的详细信息"><a href="#查看硬盘和分区的详细信息" class="headerlink" title="查看硬盘和分区的详细信息"></a>查看硬盘和分区的详细信息</h4><blockquote>
+<p>fdisk -l</p>
+</blockquote>
+<h4 id="查看网卡的硬件信息："><a href="#查看网卡的硬件信息：" class="headerlink" title="查看网卡的硬件信息："></a>查看网卡的硬件信息：</h4><blockquote>
+<p>lspci |grep -i ‘eth’</p>
+</blockquote>
+<h4 id="查看raid卡信息"><a href="#查看raid卡信息" class="headerlink" title="查看raid卡信息"></a>查看raid卡信息</h4><blockquote>
+<p>lspci |grep RAID</p>
+</blockquote>
+<h4 id="查看-显卡-信息"><a href="#查看-显卡-信息" class="headerlink" title="查看 显卡 信息"></a>查看 显卡 信息</h4><blockquote>
+<p>lspci |grep -i vga<br>lspci -v -s XXXXX</p>
+</blockquote>
+<h4 id="查询主板"><a href="#查询主板" class="headerlink" title="查询主板"></a>查询主板</h4><blockquote>
+<p>dmidecode |grep -A16 “System Information$”</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Centos</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器检验规范</title>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A3%80%E9%AA%8C%E8%A7%84%E8%8C%83.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="适用范围："><a href="#适用范围：" class="headerlink" title="适用范围："></a>适用范围：</h3><p>本规范适用于所有原材料、成品主机机箱，并作为入库交收的检验依据。</p>
+<h3 id="检验条件"><a href="#检验条件" class="headerlink" title="检验条件"></a>检验条件</h3><p>1 灯光条件：800mm-900mm的40W日光灯光下照射。</p>
+<p>2 检视角度：被检视面与光源成45度</p>
+<p>3 检视距离：400-500MM。</p>
+<p>4 检视时间：每个表面4-9秒，检验员视力：1.0以上</p>
+<h3 id="等级面的定义"><a href="#等级面的定义" class="headerlink" title="等级面的定义"></a>等级面的定义</h3><p>所有的卧式机箱都依循下列图示所分的不同区域（依每一个表面的分区来判定外观表面缺陷）。</p>
+<p>A、B面：定义为操作人员随时可看见的区域，为外观要求最严格的区域。主要是指机箱正面、顶部。</p>
+<p>C面：      定义为操作人员偶尔可看见的区域，其外观要求不如第A、B面严格。主要是指机箱侧面。</p>
+<p>D面：      定义为操作人员极少看见的区域，其外观要求次于C面的要求。主要是指机器的底面、背面。</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7zvwycs8qj30wk0bbmxb.jpg" class="lazyload"></p>
+<h3 id="缺陷分类"><a href="#缺陷分类" class="headerlink" title="缺陷分类"></a>缺陷分类</h3><ol>
+<li>异色：与原色不相同或不一致。</li>
+<li>流痕：在机箱表面上，呈波浪或斑文状，有如眼泪流过的痕迹。</li>
+<li>杂质：在机箱表面附着的小微粒。</li>
+<li>有感刮伤：目视明显或用手触摸可以感觉到的浅凹槽。</li>
+<li>无感刮伤：刮痕目视不明显，无手感.</li>
+<li>气泡：机箱喷漆在加工时因空气未排净而造成的表面气泡状或凸起。</li>
+<li>流漆：机箱烤漆表面漆太厚导致漆下流，同时伴有漆堆积现象。</li>
+<li>表面膜厚不均：烤漆表面之漆层厚薄不均。</li>
+<li>附着力差：被涂机箱表面所涂装之漆粘附力不够易脱落。</li>
+<li>字模：因产品需要在其表面冲压的字体或标记。</li>
+<li>脏污：因包装或操作等问题造成的表面杂物或不清洁物，分可擦拭和不可擦拭。</li>
+<li>毛刺：由于模具刀口钝化或滚边滑块问题造成切边产生锋利的凸出物。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>服务器</tag>
+        <tag>Anyuntec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器和VMware图解Minimal安装Centos7</title>
+    <url>/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8CVMware%E5%9B%BE%E8%A7%A3Minimal%E5%AE%89%E8%A3%85Centos7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h3><ul>
+<li>博主因为工作关系经常和服务器打交道，主要用的操作系统为Centos，这里得截图是我由VMware补充后截取，仅做参考。</li>
+<li>最小化安装，<a href="http://archive.kernel.org/centos-vault/7.5.1804/isos/x86_64/" target="_blank" rel="noopener">Minimal</a>,不带图形界面。</li>
+</ul>
+<h3 id="开机或重启前，插入U盘"><a href="#开机或重启前，插入U盘" class="headerlink" title="开机或重启前，插入U盘"></a>开机或重启前，插入U盘</h3><p>首先按下键（F2、F11 或 F12，取决与你的主板类型）进入主板的bios 设置，在列表中，修改启动项，使用U盘启动，然后就会进入Centos7的安装页面。<br>成功引导系统后，会出现下面的界面</p>
+<p><img alt="系统引导界面" title="Centos7" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7z9r4x9epj30z90m3400.jpg" class="lazyload"></p>
+<h3 id="安装界面选项"><a href="#安装界面选项" class="headerlink" title="安装界面选项"></a>安装界面选项</h3><p>这里选择Install CentOS Linux7，安装CentOS  7，回车，进入下面的界面，选择语言中文（简体）</p>
+<p><img alt="系统引导界面" title="Centos" data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7z9wcxe1wj30z80m4wj9.jpg" class="lazyload"></p>
+<p>时间、语言、网络等默认，直接点击安装位置，想做修改这里也是可以做更改的</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7z9x7drmkj30z70ltgow.jpg" class="lazyload"></p>
+<p>选择安装目标位置：除了u盘之外的盘都选上，最后点击设置：我要配置分区</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7z9yttqbpj30z70ly0v8.jpg" class="lazyload"></p>
+<p>在手动分区界面中自动创建分区（如已有分区则先选择，点击－删除，删除时勾选删除文件系统）<br>如没有点击“点这里自动创建他们（新挂载点将使用以下分区方案 lvm不要修改）</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7za072lr5j30z70lt403.jpg" class="lazyload"></p>
+<p><del>把自动生成的home删除掉，创建cores；修改cenos-boot容量大小，200G，修改文件系统的格式为ext4(除了swap不修改，其它的都修改)PS:这里是因为工作内容需要，各位看官根据自己的实际情况来确定大小</del></p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7za7hfca4j30z60htmyl.jpg" class="lazyload"></p>
+<p>点击完成进入到下一步，接受更改</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7za8azcgjj30z60lvad0.jpg" class="lazyload"></p>
+<p>设置一下密码，开始安装</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7za8s4h1nj30z80lfada.jpg" class="lazyload"></p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7zac406fnj30z80870tc.jpg" class="lazyload"></p>
+<p>点击完成，回到安装界面，需要安装一些包，等待一段时间</p>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7zacq2c5qj30z60m041n.jpg" class="lazyload"></p>
+<p>安装完成重启<br><img alt data-src="http://tva1.sinaimg.cn/large/007X8olVly1g7zadfbiksj30z60l5gno.jpg" class="lazyload"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3>]]></content>
+      <categories>
+        <category>Centos</category>
+      </categories>
+      <tags>
+        <tag>服务器</tag>
+        <tag>Centos7</tag>
+        <tag>VMware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我奋斗了18年才和你坐在一起喝咖啡</title>
+    <url>/%E6%88%91%E5%A5%8B%E6%96%97%E4%BA%8618%E5%B9%B4%E4%BB%8D%E4%B8%8D%E8%83%BD%E5%92%8C%E4%BD%A0%E5%9D%90%E5%9C%A8%E4%B8%80%E8%B5%B7%E5%96%9D%E5%92%96%E5%95%A1.html</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="输入密码，查看文章。" data-whm="输入密码，查看文章。"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="输入密码，查看文章。" /><label>输入密码，查看文章。</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="9a0427b5dd931e6274becc984ea5e0b05d6a8b9a59f709a0518e70f6053394d4">9ea70b3e97e88e497122a261add1b5707741a9eab0bfd9622143a375fc05d0cd2eac818f2c03332d8d37baca83d75cb1d6406570a6cfe8d9ce60dc5320244fb39ad1781bda6fdc8a9f1cce5616e098007005f6d2de8ad98c31ca4efb35e640d32936b2bf6b03a62f5a252a5bac8d453b32d4e19c87b09a542de9da397f6f443b99828a9c33e741d7b403addf39428756ed5a508ea09e935fb4d3463f3ebd35e275b790c3d9e5473c3257e52bbb29610ca2f3ce8dfd5b8edf37b4016dd5dbafd6568f4df1e1788da150944b9294ee358f33f6fc43f285c4dfff29aa069164aebdc2bb852b1c89719ef106ed60b8ab7485a4f1361d8d3e5b5e222714bf70f5b4962309e1b1e3b999b1d6376b5a084def7b752c79cbb672e4d23345f1312f1422237397c81190d3f6c28c32ed4dae72e88d658f91540531f76450d7ade5c4a32100871bb2ab575c638a98695e5a6c3e742b360ab94ae827731dd2d0cc8eb76c8a782aecc54eea0e4121d022f417e1bd2ca744e5a5ceaf226e08b288469205f44e93a1c08dc650a1bec27815aaa128e4dd22b075b77ef20ca0919a059d6a6b1cdc74eee69b6590240c8586ffdc563524886dc2500cd9af3abb42d30e65f804229b342d01a9f027b28dbefef9b65ce83618d00f2d05234544a4154823521a7eaecb56b9a2a9a99e40b88d737f6f65354dfb8941473da9722635f8d6118e6862e5932c3ad075c54bc49e940366cdc71c860a4549185a4eacdd99789e7220c16605d69d5b439258c6c32c5e052003fe47d10a342393f088183f1ec43b92644dfd4fcfa469477bc1cc393ef69e0cd95b18cabd18ea14a62d04bbbdde3cbfa55fe8def38c0f7629bd25176d64a48f118a7fb84b7c540820b240aa69a0289659c7d69e9962a5de1319c2be0c7dfcf2e39c011af8183768b619e2d9e4efe4095662894f4c2b892b97c9cc45731db8576d5c20dbd81fb21a8e9b382011a0f071008e352a8bc1823e0605d153813ecface42cd5976dce54e59ea4fe367a83920da354414e97f2d8e5d302a3c0e3f54d4b323ea43765940ad8071b77329423f9ce7407ab4af8ee2f1f6885172f2cb443ff8a31fc211a6d840f81c62cec4c942a7ca4c7211a78763cc046e73a154ecd93183b82c8f3b014a03007d23d592bdc43619b8aa57eac1eba444bc0c03b83898440f1845cd67abeb2048dd440262ae9a77f0f99f8e677bd37f746fea9d457336259dd9c26e8f2816e73f2751cf71e93b5c61e96196c2cb6563ecbc0c53de35a230bb23b40639bbbdd680247ae5f13e855af2e66e40d7d76c48b3ec3aea15fe732806e6eef5483c0f0daa7b2363c110e38116978725c2348dbe3dd4230ece0baae3e22f03a169ee3a21a59f439e3df0b7e8d89f23e553642dbf20398de9c48c0b6e2540438e4a6c75faef621bb5f71b0b3ab312089c87de878f63944a87a50c0a8518eaaff675d5fbbcdee8ad78cd03acc29bf0f59607b70075b2983fae6f459968d20efb36ce3cc5152d41bdeb20f5984de9c8e6f9569c23dfed58fefe2f10ac7bd66fad00312ac721b83c1c145643fdc9b91afa95139df92f7c857e8bd090c88a15ab9abe86a5e902f40c29d14a3ecf9fa6fb3286e9cb6233b6f12631f29e9fb6fe24db6d25c8c4a5573b748532352cb44d8eb4e3ee31a247bef58b541358560bfaa6d6792251ecdabc4210688f27a82cf1890021df0cfb6eba239e0f76ece4ffe9442d03af2154474db9c91b2db88b6545518178ea130138886364cc96b5330be7edfe98015cba15f0aab70b92ba2a29057f6bfa4f110f63eb41d119c0cc72dc10293463c4296ff7c9e3c294ae2fc3cc6624d67c4e18ac84bfc57dfea12af4f109372196b8615b04ac2a60b6b768937809a182f10dd6bdb51eb25c7b2c160535daae6ec7e48d7fcc6e9153d738e3734ab21190ad8c638604080d2437d912c7113d267f276adb059fdabf850a35d334dab503e887e641e069469b24e16b09045017294da62c9a0ea30a9f74e505cc5c91069b170f5b4e16459ff55af6bd6161dfb2b0df53049edca1e8c490db523352f3f8b2bacd37a6657865da2b868ec1e735d7a1f29ef0c241e03f39a0fe5c0f62975a481757eff8412ed8de71df09121abbc4e85e1f9d832d4d633026a43feb2c980db71d843694df25898a6d95ce4234a78cac131528e6f5fb3bda8c379c44ff7d41b5f7c753494e26945425bad138a7c016fb4362a5f44150851874f1118218f85f1a7fb1fe2dd84a64711776e298e24cd13d6d2008f5f5fea840bc99812a103783edfec26eb80a81d5eb4e1c54b83e87527363df1f7a7a98e2e92ccaa75a02ee24cf7b7d7991cbdea192cd0b8604bb13964e239cbe29e2e38daed4e0ac103763427d5a79533e7762ac77ce63d8db3b3c596b9958ffd096b867ecc7b3aaacd01d4c9f602160ed9aa8328465d2862efb7b7faecd19974d8734043b5f0ff4daa82e2383cb573faf1c152ad0ade13d8be1f32f6d88601f451455f200cea35470472f1bb21045b7477b812ea2005b457fe422c3b29fc96accd135d52fa691f0ac93282d16ad6fa415d5b88dc903e8c7bcfa2375d753527fc7e71a6351ce08798c6b667d3f9a2177b4d2a9ae785d43c79be0f5e7a9a396654df385de5de446fc3af33628431b0fc2e28f75e2e3deb479b7cda37ec3022c61280fab3263805b9913e49815caf99cf69e0fdc717f8b12c864ad7328ddc962070c37fafe251e3d32db94f689a440973a06d1385b214d56ac3f7a4ee8e19316e152a67e0a270861bca88467000793143854e1a307c01d2fa91b815af57e6433e7d6a7b1daf80872bc716f8a58541fb6a6676c414b3d9b7ee9b9567f671c57fc529341262ff9d9d435af377eae85a03f0a21d667ec79cb6cf5b3a91cbe922dcac19ace6ccd88109cda24894d3a95b7a2e1b5baf7603636ab6002c0d0f34e791d6dc55f09c1ab5d65cd1441dd88cc773b903d36cd5ac38841bebec52fe6b7dd6a4ddf08a45be938a851e01fa305c8607ff6aecaf848e9b0c9f51850518a7ce82e6cfb4a04aff4eb1a42206057d98b1646032ab856232ce1ec873b60a5c9eb051ba72b39bd12bce6cf91678f68d4735a8e81124db5bf498d9a990cd36c8414de1f485bdcc7619d4509e088e6342472a0021284e1b32b9ffb03fd6c295337156609fe55bfd08c3c0b6a1a2b6cbc73ee445dcbef96496effed8f32d2911b6e74828c6bf7a8b01a59190ebfcaeed81d24985314d99dbd1f03062f1b2e2a2ab80f114ee2d4686126759ebd27d7ded77d14f4ec0ed68124c06428a2f6f8070c6f24972aeda4f0a27a75887d140428d820ce0ce4b8e59a6ed6ab9df05c99e362029e29ef93ca7b93138c39dd7329dc15b2e42509ebdb29cf45be1667060173c18509b96dc68f720608dacb0a97656f0868080d4c2f35731fe6b447d2a5bf98c68e411d308400dc321ca0b135b742990268dc6a946d7b87624c2ca44f809f8eb98be9e22005022476d0580c65560b4d56f38e381cd0c796e0c706a302f3c9b6c63a76561fe6cd42df67cebdce8387b902e636b3043b8a95da6a848082a4549ea568c3ce2e373d1d9fac91f1511e9e5e31641ced77f1aff6dad933512497f06170a91a14efd3179be4a5e54234836ca7966e6cf999454d542f6475db9520b645d1402c824f14b68e16a31f889bda0d805aad3fb90775d2e6757bda56006747d88ec337fe16ae5ab6fc131315df763bf5a4bfad0397dc24b7bb542e88e0d0e731181f6d2e5ac3dfc984f494ba44b895800cb5311b5b94c373289e9cab8edbcf17052ac7c77e0c8ab869ba5872eeb16710fc0953f20bfe6b0b3f7843259e9f238ca9e7e184fccee2014e2fad1ad3f3fa0746c20a5f2da8b884c30ba893c16bffa025e3df6e1119f36c2199aadf030509413f436aa5f91be5e2d722ed9ea5a5b97f0dc46a10efeecc7d454d935cb3e9bfd8d74321170564989687d15d4d69bffd72fa041fa27fe2797d0d27a4d9d0300d6f59f77320d17eae9cd95bc8f8c3a482f989c9f7e615d071c3a5596439222621f09245ed8252bb08588c58c80e07c3188bc0a6499fffe7d9b21af6c3e6b8cada80a5d695ef54f35e466121ca9be2b3d3e1fe5bff0985dc68d50ffb4ece1ee129f37c563cec3841a2277b74ecd9863d128db66ea19f9de965026d362098fc1448e1fbe543b210f8ebb7033c3ea75f408f2e8afe545bf203232e6f732dbae113a0c430acf2dcf57f4b8d0f106e6fcc0437c8c73472cd03d2b1dd3a0c228bf9f3b89fc7ba3114db502d4a8dd816bac37247d6ee1c42bc51462c1411872a6e76c86f3872b54aa0731b05b1401af7eaf66581bdca0dd177cf78ca6d18bf06596cdd55439b8ccfb3c2407138182fe96aa932cd0a697cdb2d52823c8cc10563e7937fd723387c800e899f98e3bad91f1c42a86b48feee34e4fbc41b00b1849b9dbd0b90ecb785eccfc3a3499cd56e3f4068a39edd73829c8ace8d9fe01885d28cd42069f02ee14c5f1fdf61f32f2980c8b1141514f56c248f46f806ed1be303e595cf90437d55d2b458c7c0cb6372a2be6ca3c7acb5a826953e7e66acbb49ba758008058473d5b7fd9fde1516debae2fcef4c41c9bc68258f8da62e162a104a9d432074cb7ce89deabcc911d9b27f4f6aed8ef5399f45361df30b4b2cbeb3f2fbd511ae836b936725a87cdb55e5a825a4c9a1ee82567e82016eded9cff7493511e445f203b38bd3f367de0456a3057976b76754c78c277184bd5924c8d27e2bb6acb089dcfafd61070ea55ef43c579047bf8bf9efdba77e6da280097ffcfea76e39e8db6120e74622088519cfa157bca4dc43014fdea4e462057595ea8804997f9762b2f608554b9ebd54312008ff3f7b07aef41857bcdecc249c917a90765924b27ed948d55c5b45909e4c3b79fe4e6bfe623aae76551b502b8444b25c50f8c7b5855afb7a18b39d85e0764ed6fba52a5966d3d9060af502c65a98aceb822f6ddbe7dd5ba7cd20865c8badd3e199199b0bfc955b35e15fbb995d4c1859b2e267a3b82c5b46365a4ddd04c46bc1d5a8e91f324e99aefd21a8ec41121194b3d88fe723476ec174538800c2faabfe4c3241ce2127bf5b7482853fa1d154cb33f4b5d30b121bdab3a19eeadb4ee71fcf9f1432eb88833c100e9ec941c24ce12494983da7061dbf76b602926d74b82bd57451e33f879af4722187cc880ec0c58e32652bf45273839d3c437e62607eb76048d83bd44fdd7c149f02a8787a561c5a6d389582e569a1ac569a03b6b3aea1b3562bb39da5cbed199c3ffa3ebaa594f7c31c974f1ab26b16cc154aac2c2698e9b1bb61a8923f947221ffa65ba374c911a8f65e5458cea0ef48923a7d0509fa3bec6b4349f459f2eadcbfbacf5e227f1b9c88d0cec8fe627dd5820584c952165e10d8b5ed322a794fff24035fd0517a346095ec97fe614bdbeb603962e4e09056d4bb6878076692cc269a32be4e9612c535aa4f97ac0793e796c65882c616baf16fc03d0a26bd2e13910813dafda4d506b1b2be2288e0256f2f752b836cebcc41280d41c7abd7bbb910f12d98d20fed7a0616ae75c8758666af8f41af27ce7bd6270d068a43d3ab1edacab7b7063bbe8efa4064104ef0632bcc7dbae3ec766c1e69333751ef3c2da3fab59c648894b1abaadbe812fcdfcec01db98df3b35e941fa72ca83f453b3358f5529350f7307d57d76dbb33a7316ce278fb2f90d8f735b1a29df3a1462fae1c0f1b1ca65817309f44e6d18fc03cebf07c3a21a35def3dc305d6861377e310f46556af457ca290955089ef59d91b2c87c4fc6402295a9920d4310ad63833134457dcf684182ac040e921950a333e263f8474f40bdce02e277e6cb3589dffdb6597f36ebee9ee671059f471d8cd886698c5caaa76ac8f823c0a2ad03c51d48d4f28b5507bb90748f67777fff690d8bab30be6b54766109ff0929189606e3648c7ad5b458641b351bceb462309da34056b681b012e12206559645fe1376bc3f3e6e5d36190b4fbfa336d8e304277a48ab5d1284d9fffaefd39579118e90f9a93684cf0ae4e1d8b6878d29270c129f2f56777fa46d68232f72addacc6012ef2b9e7d0ee032ec38a4f9b857b8bc4de63de5c58989ba79b8fd60025154354585d47a8741c9b0d09f46b89dc42a187c8cacf0e6ec61e52f867e564c4812a4a9a1ee7363428c2287f01aaf5f237c8d9f52af194d85aa1ec61711caf7f77b6aaf64abd8e6407715b079e2aba79b8aa9f8c533c1572e053450ab047715ddc4c1ad29256afd784cf381f6bf044845c08366a760c3736e2b134b27149007d4d103f74ea551f5e7989b7aa0d998b97b4e6b21ca6a42e8a5c7c2e67d1fec4bf7194a3c6aade4a0263c43142025216a6053293ea9faaff6994c861c88bb05aa96159dc7b91f47655f6cc01b8d6408e91c52d4fe7646fbe660554ad4ff6d4479b0d58ecfd933f4eefbbf3fa57c64e857e2c5c08ecda77bb3c1627a8d2167c9081d2396a6fac5a48abdc5cb4fe88f472931401f9374faf1a55bc1d4bb07c495981489b6fafa4e3d0061346fba70307aebe2727d8a12bbd8e29a472f21dddd152ac1f401087aa06ae9ac237a73e155299b6385446ae895a8aaf76f8b4eefaf16349ef5da18b9249d30435c7f96fd9e2cc36a1b81ef796f1e04982b18fed7d59f77f17667ba5378a15b8ae1b1eac507debd24763a51f0e3877d743be5f9fd91368ad3d98fc686717d54ec4fd93c7fecec7b2e761d24fad606f8a47c84eee54b1cd8f2df6b26a3650161652cb7e4aa7067343cdb207eea8c2f1f044da9ce184d6b01b1a4f38ded415d85c2115944d9c635b44da41f739903d3882a3717daaec3a0f614da293d2e2d580ffd8db29d5081f4c9c09916ddfa4dff932aa4599f45244b611082e17195e527768ca8a5a5345c774372205064e3577692c26c7d1e5b65a50d91b00cad1a45f8e0837134a55839c3f712049332fd74745ddc1745c5d46dcdc1fe1d8c35bf65c87494c91fdf1e0db581265ba4c302b14bf2a7dade73adabb3b61da2709575dd9800edfaa8d836b9ed26d452d5743828e16b688c2ec4550f8b76007a2aba2b5f82b8c2b2d38e23b7e7cdcae77f01021ee918d3066d571451d1bda538602f70a365c11b7bb9303b06e59cbddb3c6b8b051f5fffd7d89b932f38fafab9a99f80d0588cf9739f511f16601f9dd3593c2fbaa36e8fe9bd14444c46fa8606cb92292f87b2093162354b6cde9ef35be26ab956df8ab722d330d6f4bbfdebdc2399686b8ca71b774e1f051fe7f7c02786ac42a02cfe69c0a0a0669321d517d53c682e544daeaee48c7860558e1983dd78696669df51cf8539fa627f630c1924c7e83640e92d83a588bdd58249070f597f1ed6def9d13beecb28b4bdbbaedfbdc0c8f3dbbe77043b8b5d5ce9c9c7c0c0c3430bd443944f0f88e8173e52909bce374076a6e77dbbd0610b94d6bea06b2a9a91e5b87af35bfb1d2174c6c01ef9454e6b3d9bb2561a06b526b34d4379ed7b7cd91f6da3cbd24aeb769db39cc3a4e6250151a98fe9db0d3492c51e957ca0e4ca38c950c6ff7b7f7639bcbb99ca10dce3cda56f7dd5a731e78818e5a09a1e5204235e2fd2027c523625c043100f02f259cb910ed275c539b5143d77147a7c4986b5d9902036fcac807d243e024c563025508b58d2246d4f0d2c3a7aeabd541082cfbd25fcd8d2d9653d7998ddf6e2c5ce8b7bf7e8c5b8f6f968ae8cb37e35195e9eb4a39b074496c5b455e6ea13a7f9c8e814a45f3128d5fc47844990a39de800da416c673d28f778b28b3b710850f820e594b32120e36f920598c8751c5eecd7a6797cb14ea0d84b42d207f51cde384fd8024f051a2e74c6a9aeca065c7473849e4344c7fcc0f944fa42507a81b06c8e731bc6c977f7feec37c89c9b1e0f66637b1ea549448aafb38864c51a0215a1a76764bce834493391682ddfb68db430d594429996eb536644dc7ff4ddb05fefc5d8dc6f786a08e9cb7ed81ccbffbdf4c5a66114380cfaac6a448115f9dda7258003fbb160b92171e1ba167d3f060694d00c5687a134061edcaf6e736b5f9a31ca77feae2738adecc3aab9bc28e6e26653549a71d21ba1ac7e31c6ade1a2a3e51e99883ec31439a9e8b0fea8f9de6f7091c16160721a90a94d9010e5e31e239e492e5e8d41cea51749d614db3069a85cd374607b456d97bbaf81ba5ceaea99a04ccc7174be7dce90121b2e5d8fc7f746ee9a367f3a65b917255d0811d062fa6b4ac1015727688b305e7169c768eaac13e8ffb9b30d04042237cc3f3841ba41be7fe563627167ff249ae3eec2c34030c55c3d26af5ffd58e839d899b963358dff7fb1ce69e5a415011aa96f4229471730e683d060247398c6fab4d5f42c48eaa4a26e24d8b06e10991ed7e99acc1fb357d11210e6e4cfcdbbc8d3a20ece2dfa3899e161e831d7fd336d34c3eb956c062c7b8a06b1df5dc89c70dfdd8a192d154e74f0506b0d0b229681ba0423725047bdc10877b0d6ae02fa552437b446fc0a071b9958113777893c52b74bf868a0dd4bf683006e621fd07c284034098b9fa20712e1045c146d3bea17bbc99039c94d4cadd3f50819136463b046f17697d51efd68beea0c974057a6d02ed20d279b6dd7e3816a50ee908435e414703ea8d80f3c7489a82bb9778a32b980f711eb4e21123c58e0ef05b295259a64e719826781d2c8138b8ef06c730a9f120b938aa094551afa01526e860443e8eaa0a5185d3b9d90ac4f53d5d9b58450e46d5b5616d650e5f0b16f1d900ec3e1f36b2f1fdfeb57f6ee59538ac1f1e48fd811afe02e78aa72b7e238654350f78f57ebc790235a9050f5d3821aa9d1d4d2edbae276d5c00f2ec45f3eaef7b41fabed9e06634f930c6f1679ef7fa546ba85a972adc1e743f9d4f99fc0e3d75acf60457ba900c0c684707226bca98e0d29e73b6dbbebc226f746222d55733a023ceb4db8705fd32d7d3e1af24d41853c67bb30b37e143d8932c603ae5e867df71bc3decaaf1cf3e1390ef88523b1a105dcf923c999805f04563359f490129bb45083548cf62d7b56d9c526527687492d4ecba537cadf43bb1bd992cc3c087ac63a6591cea870359ab246d325979963040fa5023e406f4174b4fea8a0388893fa544fe20511019db8320de275201d6322b8d278999601450bcf409aa05248c0b8930cc3a3cf383d4e9188212b12521728def8788a2a05e2b33b9e5d5080add8bdc4dd2cc568e5547ce17b11c6a1fb16acd3ba5c40677b2233af10b752b8473334de426f95db201404337641f508d6f5aff5bfde510e606b4009b1c1f83fa008bf1e38c2b08af75aa2402fcd796afde1b8c58e93bacf1e4186860f6d85ee332345278b2ead7cea45f8ead6f73c78bdf7b653bc71610a523e2b54d4435b55bf5ab9cd0fdae57bb3b9cca70fa6666d537c8d68e682865715da01d6d75b5f16a7ae22dfbfbdcd4ad744e388665e890114f570332a4f7f8dd1c0b011daf5b5d9600c22eacee67147558b59867270559817860a267b702e60877283114a58b99d8a831a3337cbb9fa377fa5c6bc12d8b5fa0afd068e8fc92869d3ec4864a6eec3aa9e650dca6f540396fc782d91c92ac4bf4f172387214469b211cd09bdd6802c70bcd0089ea379b74f6048f6daa347ca9d2ff7d86b02614a3be37118d51149e83305ec2167f677ab5b94c5c42bd552964659a40f46ce68f4f121c411022588462d49196c5fe0c0aca5b517ecb1d34af81c82f81606a99af25e221682ea56b3381f669a37b91bd978852dd0ef575eb3c2d2a742376b9899439dce02945365b751ced79373e505ff36b500f3fc1e014094ad76a1c63038ef07b0c3941f45042f1b48d3c1904ad64bf6bac5c9f89cd963eb8cf878d92f543701bb6ac0522d0084a6f47b687328d4e112203e5542b8d54fccb6f08d3558a63bcfbafebe6521a2edf233cd93d4cd2a65de855a72aaa0445e527b4ebf87877af17c5e704f250c4b762a908fe743ed286a23c1e3d65e244133be344b672003cc363a0c78680918c69f152257a3a1c319cefb9ad95a48ffe0372d4a34590c867744a459fe6bf818e49f960e7322c96dadf26cf02434b23f78a4a654fdccb4f2067b8591af724e687b3536ec1a130bb37a39d68ae260468ef693ade9183d2f157f6e69b3b0256a60ea12bb88d2ec1f8efc881899f5475d08ec060f0818a2a5fbaea220b4799a7a05ba7c75969d38e6956bf79c3918a185633f126f01cca7a65c6cc0d88983cf5b4584e9cc4a1aaa5d51768d4995fb53fe44a473e3e969dbcd96e027fac54830f9578435eb40c1243c422e116c71571b88fa58e1371acdf2d0d28faa4b58dbf5996936eda638c2212b72a70833356181b70c109c9c16b78941fef7019ec670503b912c851c41f33d2cf16f7c79bb12436d57f6094f6d42fc2546bfec0210200e88f5b9d3b3581f30970311e70528c1ba43c85c76b5882256d59bc3690cae779248547b34f8854cc6a78533d6e4e1b2276f805ec0d83249345c9241db96f022aa9dbd7f8ad3f704073cf7efc6de23ab2903fbc8455c913d6a6d5f1ede7f86d10fe2c4adf9b58a68ce1cc88eafafc21dddaaca78226531b44b6b0cca20c74d9619b883b33b697f230b8d93ea1c840e7b71ce3e0cf7a28cb69836f0476362d632491ad09d44bfe8272bc11379bab20976a7470e398a0da58716e81b3b7fc2373c693930af8792b8c174b154f9656a70185386eae08a12ae7da61b342b8f5e16bfb6ba39fe5fbbbd4f675645aca0338cbecb3a1a0a85672258070923adc9e0a99324e89e8695ea33ca5c55bc351db65761cc0b95a999f5833baf1aafd939b543ac99c2d0fe3228154516ee7a0a5fe961eb7ef4156417b356b6bc82a26d80c71a10114e3d4c16c0acbc1253aea8a32234fe0afe82c4a1a73b892b997b64d9749738d570a8dbebfa222eeb72045368659b2b78792d07056ccff2be063e2eb1907a287aa6682414345136104831d4143c90b606a3af9a0111757c5d22a58441f83a8b2816be26a5ae979134267be936d9c526c245d78ec728357d4f4da59e34d044bed53a82f89c44667f97e1c5438468ad595c41e3054f12ec12ecc4e98348b517e1a84a8d312554d5745c35777d96a1e71c5b107a4d0f9e76d26a6b43088cc93c2fd39dc6af0e2d07734e770e4eff5d0aad743adc2bfc281ce0983debcb6805bf3e890a03cac4db0f038530ab060bbbe63825b42b225710571e28fdabcc9783656b72ce21cf5c76b2d98bb815c30c82f3c7a63830843f4e8ee254a298a1dac4186d4275857fa907a8d8f79dd0e74a52fe2d5a1137b3fe0882279c8c827233e511fa4d48132adaa8cf46408f6dd366f76f1e9f5122fc6dcf522aec982b93310f0d0552e06cf0dd442363cc0f763ed64055f15d96a4b4f6bb64b3f3272700dde69bcc31dc177e411238b25e2497776f7b4d4c721a8c115587d17e113f14d7f560ee5a7ab85dbd48a236e8252a28eaeacec0c08b6d37370d459476ed292cb29dffc9a95fc1345deb2aa50d836a71ffabc144d83c4ee7e351e6b8f96c672b3c93d287e327a0958f609efeef14f64a64611a69af832951282504bcc3b473a3508ead7ce4e0df4c11626ee41614eaaed54f068b40084e9102fab273069b774577d20729deb76269aee5b57614a31fb532dc6b232edc474e774bad0d37be116cf0223930f3a1c31337a15f79f7bfa0c9582694c21eaf7bc35d762f759150f5c0bb14bd00ef8a2add4a888cd25bf54a599502e4af500a57c886618cfdd43b7fab6663c55b40198b500242be912a7418066954ee5bdfa26dbbe73f0bf110a16f2e0e2df61a3b5e797801158c77b34c4128c791c71ff79047bd8323d1684248e319e557098964879466544d6b2c5fa2bcc7c295480b583065e0a9bb8e0bb3b6bf535a3d302c58bac99854afb9512ecc94f1701b62e6a4b76202fdd9176ee8619d5b788e8c92747fae0dd4ff84b0edd8c3eaff08d1a173d0abb7f92bd217ac08fdabf156d413f6d59b12be7d7ded4ad8f35deae75705495102ac44346c8c1d1ee4942546a23d017566d282de5c480a750eecfa6272ee2acbdfd68c352db6c7ac5e4e2bd5bbf4aecba0de8711163fa6bbd5652a41378d1f8fc6a5822f34645f26f18729d60a0a8f9d2d66b3ee96b7819631468846b33bbb91108c0f4565bcfd056aae5150cf4c0f48d56784d8ffb2006097fe6b1915c7283ff67d224d6a19ab81b1324d3fab987e2934fbb16fab3ffe9c08cebbab572f41edb384c24028ae895fe97145294e52939f5390cd3ba0226596a3bf5dc3f6e1b0e336c4cca23b0c727a8c3383df4162bed60e9019691cb061cd0fd51262f5b4f744713f503b60857a831f1055c90085d885615f75a44a44f9755d0c8eafd9b164602cc1810b16961808db9441d5e522fd0e2534aff49cb0d790069d02a34a7e057d2338906069978bbf110e261e948bb85dbac348e903d604a9db14d738df9cd9291e8d535fc3e2261b1a2666e6ce154129de742bc218118a743283af028297d69d9fb242b1c42edb53cac1b90c75ff64a16916d0190407455ca8a500364569f1cfb8044c269cd886bddd4c9e004268f05e7c0bd669f2c68d28857bb525b88a69fc3d9411f7c0f541399a4c9f455f380d7876b17b582ff35d9bedba20764c1163c3f0646e3c8ccbd2cf809a3a5509848ccf19fb243a0b76d527ed8abb70e661a99b8a8f6b602e03ed032b7cc5e3c48fe1e327f5a978f1fe3dc594ab2027094f1698b758738134ae63b3ee3e1deb2a58c7e8463bb23396764c88626c1b8c54a780f17e075f72ca612cbcae89af23a01d110f773ca5a012d500c85ee63b247cf5d499c277a5088d9d88d711aeda1eb88bb5885d642d2e48f2052fda6621314a583918679ba6d2bafe173874aa213c651993a4b608c3a78cfdf5c7adf53df49066876ede2a8c86cdd24467ace82b1cf124405318b74be3eef34d985a758b20decd25c7131a4d2f05b62860e64a593d78a2736e8b09b87fd6e97bcb5afffc2205a4d50178906d84ef81985d223c5a3f67722f2294ecab67c02cfe202e578501857302f266308c83875a5e84eb95f44478ad8bc2ac95827c98905eb5331b1d2868f473794fa754b9bec9eecafc10f228718d235ec1d6901dbfb0d69406dd27cc93e6064a6147cd9a02e1928721fbd46ffb503a399b7afb9d14fa3dd0c98e9347de46be13d47ef01629a1c257bcb1001e3f57d2d8fed1471008c351100571e3801727be9c1e776ea8c16410e0977951d438274c9c6be620d21ded1fd312d182ef45b0747bb72cb43ef7570c654705a1566f33928009fc7254a125483e926391cec9e2b645fd558818ddd83a3ba1cb9cdf01eda09a2dafcd23988762c580414fc3fde3217b831117da4fe94ab7725ad525ff91880ca14b8a7a2fcb476b1d19a38264d59a4dac989752fe7c5a9e8757fe10bda3f6a7bdceba714a3d049a34e1d21bed42324a921642db4b80dc3f2c22de36e037583ec393f3c376ac68acc614a799b1f35c921b42547cb0e388f232edf17546ff9fa6976b8228ba449d76607abdfd186de95658de1b0e0e353ec233309115f0f0db13dffc792ca77333c72b7ad498600896aaa544f317d62b9f33aa2c27dcf82e1cf0db6bceda7aa21c089df806c08dade80496b2af76eba306139b3c8f6339eb6981f93fe98c737c334344a30922ce9c3ae833683aa8a105cc812dc33c5f274f876bed28db08c40e86bb1ef6cdf43b15552dc6275069d4a4d8136b5e3c1f8327bdfd6ce0bb362a6f424bc195a26a37bf1b03445186682606e90da0b3f2b4cf82e47709c0095df8e074607d630e0895e76cefcae69ceb6e0e7c2a0ba68d822349a9b3c54749a0e1e08d4691d866eae6b55b69715b87318188dfd52a9a6c762ffc271471cfc6fe9f830cbbfc3c8fd255ebd5ec2f95777ae3737b3a2dea12f462787bb0e50852b71f79fbec162719e01963b6f8aa48c19a8009b6c5d1c231ff29f2a5f1c172304f0135922c6013648a06477d0a0aa7d1f387c8392406114fa56269e3fb188ca9df654be92174a488410bfa4e23c698452c0076e032841e1985842b9d133057be82caaea155146548224ab6e74101708684a68deaad82c948b136f24a4fb03f466b044e691ebdddd6cf0c92c56584e3b4a26bd5ffcca16aee1be6dbecf477df3c0f8d81167697373c3f51097c7389e169124ea81628c40c4d382ccab2f8d1ffdaf560b4d5b76e402584391609941c17b4718cdd8829d07e1893aa3663207d2ca1f83a411f55e911c3253c7d326d44d25703a1e827f65640e293419650fe557721d42f6fcdf075d002516c746d4e57156828af3e2ff443eab0a8e059adcc328c1f52f4e60e150302fc8229fa5337f373326560df87254aebebdbda1f8beda5b341aedd52b4e39d4a966775f5214eef90da859cc13b6d0e2f070b3c567c103c38d4c176c02c0a24ca4cbf69e3d74e33365d31150e902bb812e6624c73d3c8763fc67bbd7cde85fc1ac20d8ef05d87b2fa106da2a4ec93743b950e8e1e3a8f3521b044ce56b5015d063757ba97484137080e7a422555171801681e7731095079577e8135b088acd8e53cab38fa03ddffb2ed93b7fabe7f84aea45b918a8e1d1642936148078bcd640ec1f8253764b89d977580bf8b346ae6ada2eb54a1f4c7b21651946b7e9fdc350b1672405c2bd70bfb9f1605740b4de9150cdcd71c62b2004a9c598f3f3e78ff26958845ddf0152f4c6044df05ca21513169e8685a47da047cb038f9339fa2bfd7a442aa2aaec7ff18ded80bbf3593f091718bdb50c437293c1a7eef4012e641eabf8e73abb670553ee00b406ca45f4204a05fb2c993040cdd6e02ebbdf34d0ecb2ada</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>语不惊人死不休</category>
+      </categories>
+      <tags>
+        <tag>语不惊人死不休</tag>
+        <tag>摘抄</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7-RPM包文件安装</title>
+    <url>/Centos7-RPM%E5%8C%85%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="Centos7-rpm包官方下载网址"><a href="#Centos7-rpm包官方下载网址" class="headerlink" title="Centos7 rpm包官方下载网址"></a>Centos7 rpm包官方下载网址</h4><p><a href="http://mirror.centos.org/centos/7/os/x86_64/Packages/" title="网址连接" target="_blank" rel="noopener">网址信息如下:</a></p>
+<blockquote>
+<p><a href="http://mirror.centos.org/centos/7/os/x86_64/Packages/" target="_blank" rel="noopener">http://mirror.centos.org/centos/7/os/x86_64/Packages/</a><br><img alt data-src="http://mirror.centos.org/HEADER.images/modern-CentOS-logo.png" class="lazyload"></p>
+</blockquote>
+<p>rpm包：编译之后的二进制程序包</p>
+<blockquote>
+<h4 id="rpm-ivh-rpm包名-【安装】"><a href="#rpm-ivh-rpm包名-【安装】" class="headerlink" title="rpm -ivh rpm包名  【安装】"></a>rpm -ivh rpm包名  【安装】</h4></blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="left">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-i</td>
+<td align="left">(install)安装</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="left">(verbose显示详细信息</td>
+</tr>
+<tr>
+<td align="center">-h</td>
+<td align="left">(hash)显示进度</td>
+</tr>
+<tr>
+<td align="center"><del>–nodeps</del></td>
+<td align="left"><del>不检测依赖性</del></td>
+</tr>
+<tr>
+<td align="center"><del>–force</del></td>
+<td align="left"><del>强制安装</del></td>
+</tr>
+</tbody></table>
+<hr>
+<blockquote>
+<h4 id="rpm-ivh-rpm包名-【更新】"><a href="#rpm-ivh-rpm包名-【更新】" class="headerlink" title="rpm -ivh rpm包名  【更新】"></a>rpm -ivh rpm包名  【更新】</h4></blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="left">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-u</td>
+<td align="left">(upgrade)升级</td>
+</tr>
+</tbody></table>
+<hr>
+<blockquote>
+<h4 id="rpm-e-rpm包名-【卸载】"><a href="#rpm-e-rpm包名-【卸载】" class="headerlink" title="rpm -e rpm包名  【卸载】"></a>rpm -e rpm包名  【卸载】</h4></blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="left">注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-e</td>
+<td align="left">(erase)卸载</td>
+</tr>
+<tr>
+<td align="center">—</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="服务器上下载rpm包"><a href="#服务器上下载rpm包" class="headerlink" title="服务器上下载rpm包"></a>服务器上下载rpm包</h4><pre><code>yum -y install   ~~xxx~~  --downloadonly --downloaddir /root/
+
+![](http://tva1.sinaimg.cn/large/0060lm7Tly1g62nnti4v0j319i0iq3ze.jpg)
+
+</code></pre>]]></content>
+      <categories>
+        <category>Centos</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>Liunx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7默认启动顺序设置和删除内核</title>
+    <url>/Centos7%E9%BB%98%E8%AE%A4%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F%E8%AE%BE%E7%BD%AE%E5%92%8C%E5%88%A0%E9%99%A4%E5%86%85%E6%A0%B8.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="更改内核启动顺序"><a href="#更改内核启动顺序" class="headerlink" title="更改内核启动顺序"></a>更改内核启动顺序</h3><p>Centos7 服务器每次重启都会启动最新内核版本，有时候我不希望启动最新的，由于和现在某些软件不兼容，还是想选择旧的版本，下面是如何开机启动你的旧版本内核</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# uname -sr</span><br><span class="line">Linux 3.10.0-862.el7.x86_64 注：这个就是内核版本号</span><br></pre></td></tr></table></figure>
+
+<p>查看系统上的所有可用内核：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# sudo awk -F\&apos; &apos;$1==&quot;menuentry &quot; &#123;print i++ &quot; : &quot; $2&#125;&apos; /etc/grub2.cfg</span><br><span class="line">0 : CentOS Linux (3.10.0-957.27.2.el7.x86_64) 7 (Core)</span><br><span class="line">1 : CentOS Linux (3.10.0-862.el7.x86_64) 7 (Core)</span><br><span class="line">2 : CentOS Linux (0-rescue-3d8698de8c6b4c4586bd5f41a20ec7d6) 7 (Core)</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<p><strong>服务器上存在3个内核，我们要使用(3.10.0-862.el7.x86_64）这个版本，可以通过 <code>grub2-set-default 1</code> 命令或编辑 <code>/etc/default/grub</code> 文件来设置</strong></p>
+<p> 编辑 <code>/etc/default/grub</code> 文件</p>
+<blockquote>
+<p> 设置 GRUB_DEFAULT=1，通过上面查询显示的编号为 1 的内核作为默认内核：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GRUB_TIMEOUT=5</span><br><span class="line">GRUB_DISTRIBUTOR=&quot;$(sed &apos;s, release .*$,,g&apos; /etc/system-release)&quot;</span><br><span class="line">GRUB_DEFAULT=1</span><br><span class="line">GRUB_DISABLE_SUBMENU=true</span><br><span class="line">GRUB_TERMINAL_OUTPUT=&quot;console&quot;</span><br><span class="line">GRUB_CMDLINE_LINUX=&quot;net.ifnames=0 biosdevname=0 crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet&quot;</span><br><span class="line">GRUB_DISABLE_RECOVERY=&quot;true&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成 grub 配置文件并重启</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# grub2-mkconfig -o /boot/grub2/grub.cfg</span><br><span class="line">Generating grub configuration file ...</span><br><span class="line">Found linux image: /boot/vmlinuz-3.10.0-957.27.2.el7.x86_64</span><br><span class="line">Found initrd image: /boot/initramfs-3.10.0-957.27.2.el7.x86_64.img</span><br><span class="line">Found linux image: /boot/vmlinuz-3.10.0-862.el7.x86_64</span><br><span class="line">Found initrd image: /boot/initramfs-3.10.0-862.el7.x86_64.img</span><br><span class="line">Found linux image: /boot/vmlinuz-0-rescue-3d8698de8c6b4c4586bd5f41a20ec7d6</span><br><span class="line">Found initrd image: /boot/initramfs-0-rescue-3d8698de8c6b4c4586bd5f41a20ec7d6.img</span><br><span class="line">done</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="删除内核"><a href="#删除内核" class="headerlink" title="删除内核"></a>删除内核</h3><p>查看都有那些内核：</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# rpm -qa | grep kernel</span><br><span class="line">kernel-tools-3.10.0-957.27.2.el7.x86_64</span><br><span class="line">kernel-3.10.0-862.el7.x86_64</span><br><span class="line">kernel-headers-3.10.0-957.27.2.el7.x86_64</span><br><span class="line">kernel-3.10.0-957.27.2.el7.x86_64</span><br><span class="line">kernel-tools-libs-3.10.0-957.27.2.el7.x86_64</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p> yum remove 删除内核的 RPM 包</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# yum remove kernel-tools-3.10.0-957.27.2.el7.x86_64</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Centos</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>Liunx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7-网卡绑定</title>
+    <url>/Centos7-%E7%BD%91%E5%8D%A1%E7%BB%91%E5%AE%9A.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="环境简述"><a href="#环境简述" class="headerlink" title="环境简述"></a>环境简述</h3><ol>
+<li>centos7操作系统，通过多张网卡绑定为一个逻辑网卡，实现本地网卡的冗余，带宽扩容和负载均衡</li>
+<li>物理网卡eth2、eth3和eh4 </li>
+<li>H3C s5130交换机</li>
+<li>bond方式</li>
+</ol>
+<h3 id="bond模式介绍"><a href="#bond模式介绍" class="headerlink" title="bond模式介绍"></a>bond模式介绍</h3><ul>
+<li>网卡绑定mode共有七种(0~6) bond0、bond1、bond2、bond3、bond4、bond5、bond6</li>
+<li>常用的有三种</li>
+</ul>
+<ul>
+<li>[0] <strong>mode=0：平衡负载模式，有自动备援，但需要”Switch”支援及设定</strong></li>
+<li>[1] mode=1：自动备援模式，其中一条线若断线，其他线路将会自动备援</li>
+<li>[6] mode=6：平衡负载模式，有自动备援，不必”Switch”支援及设定</li>
+</ul>
+<h3 id="服务器配置bond"><a href="#服务器配置bond" class="headerlink" title="服务器配置bond"></a>服务器配置bond</h3><p> eth2、eth3和eth4 编辑需要绑定的物理网卡，并且指定主从，网卡配置信息如下</p>
+<p><strong>以eth2举例说明</strong></p>
+<blockquote>
+<p>TYPE=Ethernet<br>BOOTPROTO=none<br>DEVICE=eth2<br>ONBOOT=yes<br>USERCTL=no<br>SLAVE=yes<br>MASTER=bond0<br>NM_CONTROLLED=no    [注]</p>
+</blockquote>
+<p>ETH3和ETH4 配置和ETH2类似，唯一修改的地方为DEVICE的名字</p>
+<p>[注]: NM_CONTROLLED=yes,说明 Network manger服务缺省情况下是启动的,NM_CONTROLLED是network manger的参数，它是实时生效的，修改后无需要重启网络服务（或网卡），如果NM_CONTROLLED=yes，当你修改ifcfg-ethx的文件内容时，如果内容不完全正确，有很大概率导致网络中断</p>
+<p><strong>bond0</strong><br>在/etc/sysconfig/network-scripts/目录下，创建ifcfg-bond0文件</p>
+<blockquote>
+<p>TYPE=Ethernet<br>BOOTPROTO=static<br>NAME=bond0<br>DEVICE=bond0<br>ONBOOT=yes<br>IPADDR=192.168.100.1<br>NETMASK=255.255.255.0<br>GATEWAY=192.168.100.254<br>USERCTL=no<br>BONDING_OPTS=”miimon=100 mode=0”<br>NM_CONTROLLED=no</p>
+</blockquote>
+<p><strong>修改modprobe相关设定文件</strong></p>
+<p> vi /etc/modprobe.d/bonding.conf</p>
+<blockquote>
+<p>lias bond0 binding<br>options bond0 miimon=100 mode=0</p>
+</blockquote>
+<p><strong>关闭NetworkManager服务</strong></p>
+<blockquote>
+<p>chkconfig NetworkManager off<br>service NetworkManager stop<br>systemctl disable NetworkManager</p>
+</blockquote>
+<h4 id="重启网卡并查看当前网络配置"><a href="#重启网卡并查看当前网络配置" class="headerlink" title="重启网卡并查看当前网络配置"></a>重启网卡并查看当前网络配置</h4><p>systemctl restart network<br>ip a </p>
+<h4 id="查看bond0运行状态"><a href="#查看bond0运行状态" class="headerlink" title="查看bond0运行状态"></a>查看bond0运行状态</h4><p>cat /proc/net/bonding/bond0</p>
+<hr>
+<p>服务器上配置结束，选择的是mode1需要交换机支持</p>
+]]></content>
+      <categories>
+        <category>Centos</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>Liunx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker镜像保存和加载</title>
+    <url>/Docker%E9%95%9C%E5%83%8F%E4%BF%9D%E5%AD%98save%E5%92%8C%E5%8A%A0%E8%BD%BDload.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="查看需要保存的镜像的ID"><a href="#查看需要保存的镜像的ID" class="headerlink" title="查看需要保存的镜像的ID"></a>查看需要保存的镜像的ID</h4><blockquote>
+<p>[root@localhost ~]# docker images<br>[root@localhost ~]#docker ps</p>
+</blockquote>
+<h4 id="保存镜像"><a href="#保存镜像" class="headerlink" title="保存镜像"></a>保存镜像</h4><blockquote>
+<p>[root@localhost ~]#docker commit 765cfe2feb4d 10.1.1.111:5000/web:1.2.0.6</p>
+</blockquote>
+<blockquote>
+<p>[root@localhost ~]#docker save 10.1.1.111:5000/web:1.2.0.6 |gzip &gt; ./web.zip</p>
+</blockquote>
+<h4 id="加载镜像"><a href="#加载镜像" class="headerlink" title="加载镜像"></a>加载镜像</h4><p><strong>可以在任何装 docker 的地方加载,刚保存的镜像了。</strong></p>
+<blockquote>
+<p>[root@localhost ~]#docker load -i web.zip</p>
+</blockquote>
+<blockquote>
+<p>[root@localhost ~]#docker run</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown语法总结</title>
+    <url>/Markdown%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="什么是Markdown？为啥使用Markdown？"><a href="#什么是Markdown？为啥使用Markdown？" class="headerlink" title="什么是Markdown？为啥使用Markdown？"></a>什么是Markdown？为啥使用Markdown？</h3><p>百度百科：Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p>可以让你专注文字内容</p>
+<p>学习成本较低</p>
+<h3 id="博主使用的编辑器"><a href="#博主使用的编辑器" class="headerlink" title="博主使用的编辑器"></a>博主使用的编辑器</h3><p>在线: github  简书<br>Mac: HexoEditor<br>Win: <a href="https://github.com/zhuzhuyule/HexoEditor/releases" target="_blank" rel="noopener">HexoEditor</a></p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><blockquote>
+<h3 id="1-标题与正文"><a href="#1-标题与正文" class="headerlink" title="1. 标题与正文"></a>1. 标题与正文</h3></blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 一级标题#</span><br><span class="line">* 二级标题##</span><br><span class="line">* 三级标题###</span><br><span class="line">* 四级标题####</span><br><span class="line">* 五级标题#####</span><br><span class="line">* 六级标题######</span><br></pre></td></tr></table></figure>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>####### 并没有七级标题<br>我是正文<br>通常也使用 === 表示一级标题，使用 — 表示二级标题。</p>
+<p>示例：</p>
+<h1 id="这是一个一级标题"><a href="#这是一个一级标题" class="headerlink" title="这是一个一级标题"></a>这是一个一级标题</h1><h2 id="这是一个二级标题"><a href="#这是一个二级标题" class="headerlink" title="这是一个二级标题"></a>这是一个二级标题</h2><h3 id="这是一个三级标题"><a href="#这是一个三级标题" class="headerlink" title="这是一个三级标题"></a>这是一个三级标题</h3><blockquote>
+<h3 id="2-粗体"><a href="#2-粗体" class="headerlink" title="2. 粗体"></a>2. 粗体</h3></blockquote>
+<p>写作总要有些重点吧，<code>**加粗**</code>、<code>*斜体*</code>、<code>~~删除线~~</code>开始派上用场了。这时你基本不会打开 Word 那样的笨重软件了</p>
+<ul>
+<li><strong>加粗</strong> </li>
+<li><em>斜线</em> </li>
+<li><del>删除线</del></li>
+</ul>
+<blockquote>
+<h2 id="3-无序列表"><a href="#3-无序列表" class="headerlink" title="3. 无序列表"></a>3. 无序列表</h2></blockquote>
+<ul>
+<li>使用 *，+，- 表示无序列表。</li>
+<li>无序列表</li>
+<li>say something</li>
+<li>敲两次Enter（回车）就可以退出编辑</li>
+</ul>
+<blockquote>
+<h3 id="4-有序列表"><a href="#4-有序列表" class="headerlink" title="4.有序列表"></a>4.有序列表</h3></blockquote>
+<ol start="2">
+<li>使用数字和点表示有序列表。</li>
+<li>有序列表</li>
+<li>second</li>
+<li>third</li>
+<li>first</li>
+</ol>
+<blockquote>
+<h3 id="5-插入链接"><a href="#5-插入链接" class="headerlink" title="5. 插入链接"></a>5. 插入链接</h3></blockquote>
+<p><a href="https://www.longlivemylove.com" target="_blank" rel="noopener">longlivemylove</a></p>
+<blockquote>
+<h3 id="6-插入图片"><a href="#6-插入图片" class="headerlink" title="6. 插入图片"></a>6. 插入图片</h3></blockquote>
+<p><img alt="阴阳师" data-src="https://nie.res.netease.com/r/pic/20190521/45ec8c35-01b0-4977-a934-18088efd604c.jpg" class="lazyload"></p>
+<blockquote>
+<h3 id="7-制作一份待办事宜"><a href="#7-制作一份待办事宜" class="headerlink" title="7. 制作一份待办事宜"></a>7. 制作一份待办事宜</h3></blockquote>
+<ul>
+<li><input disabled type="checkbox"> 123</li>
+<li><input disabled type="checkbox"> 456</li>
+<li><input checked disabled type="checkbox"> 789</li>
+<li><input checked disabled type="checkbox"> 1024</li>
+<li><input checked disabled type="checkbox"> 2048</li>
+</ul>
+<blockquote>
+<h3 id="8-绘制表格"><a href="#8-绘制表格" class="headerlink" title="8. 绘制表格"></a>8. 绘制表格</h3><p><a href="http://www.tablesgenerator.com/" target="_blank" rel="noopener">http://www.tablesgenerator.com/</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">X</td>
+<td align="right">$3</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">Y</td>
+<td align="right">$2</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">Z</td>
+<td align="right">$1</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<blockquote>
+<h3 id="9-文字引用"><a href="#9-文字引用" class="headerlink" title="9. 文字引用"></a>9. 文字引用</h3></blockquote>
+<p>使用 &gt; 表示文字引用</p>
+<blockquote>
+<p>LONGLIVEMYLOVE</p>
+<blockquote>
+<p>野火烧不尽，春风吹又生</p>
+<blockquote>
+<p>野火烧不尽，春风吹又生</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<h3 id="10-注脚"><a href="#10-注脚" class="headerlink" title="10. 注脚"></a>10. 注脚</h3></blockquote>
+<p>这是一个链接到谷歌的<a href="http://www.google.com" target="_blank" rel="noopener">^脚注</a>。</p>
+<blockquote>
+<h3 id="11-加强的代码块"><a href="#11-加强的代码块" class="headerlink" title="11. 加强的代码块"></a>11. 加强的代码块</h3></blockquote>
+<p>支持四十一种编程语言的语法高亮的显示，行号显示。<br>非代码示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install -y lrzsz</span><br></pre></td></tr></table></figure>
+
+<p>Python 示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>+<span class="number">1</span>=<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="12-分割线"><a href="#12-分割线" class="headerlink" title="12. 分割线"></a>12. 分割线</h3></blockquote>
+<hr>
+<hr>
+<p>三个或者三个以上的 - 或者 * 都可以。如下图所示：</p>
+<blockquote>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>Markdown的功能还有很多，需要多多尝试用来写作才会更好的掌握</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mysql常用命令</title>
+    <url>/Mysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="首先登陆Mysql数据库"><a href="#首先登陆Mysql数据库" class="headerlink" title="首先登陆Mysql数据库"></a>首先登陆Mysql数据库</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show databases；</span><br><span class="line">show tables；</span><br><span class="line">desc +表名</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改字段类型</p>
+<ul>
+<li><input checked disabled type="checkbox"> alter table task_course modify description text;</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>修改表名 </p>
+<ul>
+<li><input checked disabled type="checkbox"> alter table test_a rename to sys_app;</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>设置字段允许为空</p>
+<ul>
+<li><input checked disabled type="checkbox"> alter table sys_application  modify column description varchar(255) null</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>删除字段</p>
+<ul>
+<li><input checked disabled type="checkbox"> alter table t_app drop aid;</li>
+</ul>
+</blockquote>
+<h3 id="备份数据库"><a href="#备份数据库" class="headerlink" title="备份数据库"></a>备份数据库</h3><p>1.2.0.1是我载数据库中创建的数据库。</p>
+<blockquote>
+<p>mysqldump -uroot -p 1.2.0.1 &gt; ./1.2.0.111.sql;</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Mysql</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>交换机划分Vlan和端口镜像</title>
+    <url>/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%88%92%E5%88%86vlan%E5%92%8C%E9%95%9C%E5%83%8F%E7%AB%AF%E5%8F%A3(%E5%8D%8E%E4%B8%BA%E5%92%8CH3C).html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="环境简述"><a href="#环境简述" class="headerlink" title="环境简述"></a>环境简述</h4><p>目的通过交换机设置12个Vlan，每个端口DHCP动态获取地址，ip地址池设置在1-3三个地址，47口作为镜像端口,源端口为1-12<br>vlan的地址为101-112，这里以Vlan101为例,IP地址为10.0.1.x/24 网关 ：10.0.1.254/24</p>
+<h3 id="华为交换机配置如下"><a href="#华为交换机配置如下" class="headerlink" title="华为交换机配置如下"></a>华为交换机配置如下</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[HUAWEI]vlan 101</span><br><span class="line">[HUAWEI-vlan101]quit</span><br><span class="line">[HUAWEI]interface Vlanif 101</span><br><span class="line">[HUAWEI-Vlanif101]ip address 10.0.1.254 255.255.255.0</span><br><span class="line">[HUAWEI-Vlanif101]dhcp select interface</span><br><span class="line">[HUAWEI-Vlanif101]dhcp server ip-range 10.0.1.1 10.0.1.3</span><br><span class="line">[HUAWEI-Vlanif101]dhcp server gateway-list 10.0.1.254</span><br><span class="line">[HUAWEI-Vlanif101]dhcp server lease day 10 </span><br><span class="line">[HUAWEI-Vlanif101]quit</span><br><span class="line">[HUAWEI]interface GigabitEthernet 0/0/1</span><br><span class="line">[HUAWEI-GigabitEthernet0/0/1]port default vlan 101</span><br><span class="line">[HUAWEI-Vlanif101]quit</span><br></pre></td></tr></table></figure>
+
+<p>华为端口镜像</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[HUAWEI]observe-port 1 interface GigabitEthernet 0/0/47</span><br><span class="line">[HUAWEI]interface range GigabitEthernet 0/0/1 to GigabitEthernet 0/0/12</span><br><span class="line">[HUAWEI-port-group]port-mirroring to observe-port 2 both</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="H3C交换机配置如下"><a href="#H3C交换机配置如下" class="headerlink" title="H3C交换机配置如下"></a>H3C交换机配置如下</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[H3C]vlan 101</span><br><span class="line">[H3C-vlan101]quit </span><br><span class="line">[H3C]interface Vlan-interface 101</span><br><span class="line">[H3C-Vlan-interface101]ip address 10.0.1.254 24</span><br><span class="line">[H3C-Vlan-interface101]quit </span><br><span class="line">[H3C]interface GigabitEthernet 1/0/1</span><br><span class="line">[H3C-GigabitEthernet1/0/1]port access vlan 101</span><br><span class="line">[H3C-GigabitEthernet1/0/1]quit</span><br><span class="line">[H3C]dhcp server ip-pool 113</span><br><span class="line">[H3C-dhcp-pool-113]gateway-list 10.0.13.254</span><br><span class="line">[H3C-dhcp-pool-113]network 10.0.13.0 24</span><br><span class="line">[H3C-dhcp-pool-113]address range 10.0.13.1 10.0.13.3</span><br><span class="line">[H3C-dhcp-pool-113]expired day 10 </span><br><span class="line">[H3C-dhcp-pool-113]dns-list 8.8.8.8</span><br><span class="line">[H3C-dhcp-pool-113]quit</span><br></pre></td></tr></table></figure>
+
+<p>H3C端口镜像</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[H3C]mirroring-group 1 local</span><br><span class="line">[H3C]mirroring-group 1 monitor-port GigabitEthernet 1/0/47</span><br><span class="line">[H3C]interface range GigabitEthernet 1/0/1 to GigabitEthernet 1/0/12</span><br><span class="line">[H3C-if-range]mirroring-group 1 mirroring-port both</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Switch</category>
+      </categories>
+      <tags>
+        <tag>Switch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>交换机链路聚合</title>
+    <url>/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%93%BE%E8%B7%AF%E8%81%9A%E5%90%88.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="环境简述"><a href="#环境简述" class="headerlink" title="环境简述"></a>环境简述</h4><ol>
+<li>interface GigabitEthernet 1/0/1 到interface GigabitEthernet 1/0/3做一个聚合口， 链路聚合可以增加带宽，加上单链路故障，好处不多说</li>
+<li>服务器上多网卡绑定到了bond0上</li>
+</ol>
+<h4 id="H3C交换机详细配置如下："><a href="#H3C交换机详细配置如下：" class="headerlink" title="H3C交换机详细配置如下："></a>H3C交换机详细配置如下：</h4><p>创建聚合口，直接在配置模式下输入</p>
+<blockquote>
+<p>[H3C]interface Bridge-Aggregation 1</p>
+</blockquote>
+<blockquote>
+<p>[H3C-Bridge-Aggregation1]quit</p>
+</blockquote>
+<p>把需要添加的端口加入到这个聚合口中来，以1口举例在接口视图下输入</p>
+<blockquote>
+<p>[H3C]interface GigabitEthernet 1/0/1</p>
+</blockquote>
+<blockquote>
+<p>[H3C-GigabitEthernet1/0/1]port link-aggregation group 1</p>
+</blockquote>
+<blockquote>
+<p>[H3C-GigabitEthernet1/0/1]quit</p>
+</blockquote>
+<p>都添加好之后，查看配置聚合口状态</p>
+<blockquote>
+<p>[H3C]display link-aggregation verbose</p>
+</blockquote>
+<p><img alt data-src="http://tva1.sinaimg.cn/large/0060lm7Tly1g62r1lg7dcj30w70hqaba.jpg" class="lazyload"></p>
+<hr>
+<h4 id="华为交换机详细配置如下："><a href="#华为交换机详细配置如下：" class="headerlink" title="华为交换机详细配置如下："></a>华为交换机详细配置如下：</h4><p>创建聚合口，直接在配置模式下输入</p>
+<blockquote>
+<p>[HUAWEI]interface Eth-Trunk 1<br>[HUAWEI-Eth-Trunk1]port link-type access</p>
+</blockquote>
+<p>把需要添加的端口加入到这个聚合口中来，以1口举例在接口视图下输入</p>
+<blockquote>
+<p>[HUAWEI]interface GigabitEthernet0/0/1<br>[HUAWEI-GigabitEthernet0/0/1]eth-trunk 1</p>
+</blockquote>
+<p>都添加好之后，查看配置聚合口状态</p>
+<blockquote>
+<p>[HUAWEI]display eth-trunk 1</p>
+</blockquote>
+<hr>
+]]></content>
+      <categories>
+        <category>Switch</category>
+      </categories>
+      <tags>
+        <tag>Centos</tag>
+        <tag>Switch</tag>
+      </tags>
+  </entry>
+</search>
